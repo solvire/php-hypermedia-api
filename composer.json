@@ -16,7 +16,7 @@
             "Solvire\\Tests\\": "tests/"
         }
     },
-    "license": "GPL",
+    "license": "MIT",
     "authors": [
         {
             "name": "Steven Scott",
