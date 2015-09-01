@@ -1,0 +1,26 @@
+{
+    "name": "solvire/php-hypermedia-api",
+    "description": "PHP Hypermedia Enabled API Wrapper for HTTP REST",
+    "require": {
+        "nesbot/carbon": "^1.19",
+        "solvire/common-utilities": "v0.0.2",
+        "apache/log4php": "2.3.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^4.7.5",
+        "mockery/mockery": "^0.9.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Solvire\\": "src/",
+            "Solvire\\Tests\\": "tests/"
+        }
+    },
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "Steven Scott",
+            "email": "stevenjscott@gmail.com"
+        }
+    ]
+}
