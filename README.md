@@ -1,4 +1,4 @@
-# PHP Hypermedia API Wrapper for HATEOAS Enabled HTTP or REST Services
+# PHP Hypermedia API Wrapper for HATEOAS HTTP or REST Services
 ## Repo: php-hypermedia-api
 
 ## Hypermedia API 
