@@ -1,6 +1,8 @@
 <?php
 namespace Solvire\API\Representatives;
 
+use Solvire\API\Serializers\BaseSerializer;
+use Solvire\API\Renderers\BaseRenderer;
 /**
  * 
  * @author solvire <stevenjscott@gmail.com>
@@ -27,12 +29,13 @@ abstract class BaseRepresentationController
      */
     protected $request = null;
     
+
     /**
      * 
-     * @param unknown $serializer
-     * @return \Solvire\API\Representatives\RepresentationControllers
+     * @param BaseSerializer $serializer
+     * @return \Solvire\API\Representatives\BaseRepresentationController
      */
-    public function setSerializer($serializer)
+    public function setSerializer(BaseSerializer $serializer)
     {
         $this->serializer = $serializer;
         return $this;
@@ -47,11 +50,11 @@ abstract class BaseRepresentationController
     }
 
     /**
-     *
-     * @param unknown $renderer
-     * @return \Solvire\API\Representatives\RepresentationControllers
+     * 
+     * @param BaseRenderer $renderer
+     * @return \Solvire\API\Representatives\BaseRepresentationController
      */
-    public function setRenderer($renderer)
+    public function setRenderer(BaseRenderer $renderer)
     {
         $this->renderer = $renderer;
         return $this;
@@ -68,7 +71,7 @@ abstract class BaseRepresentationController
     
     /**
      *
-     * @param HttpRequest $request
+     * @param mixed $request
      * @return \Solvire\API\Representatives\RepresentationControllers
      */
     public function setRequest($request)
