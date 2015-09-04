@@ -54,6 +54,8 @@ abstract class DataField
     ];
 
     protected $fillable = [
+        'name',
+        'columnName',
         'readOnly',
         'writeOnly',
         'required',
@@ -63,7 +65,6 @@ abstract class DataField
         'label',
         'helpText',
         'style',
-        'errorMessages',
         'validators'
     ];
 
@@ -80,32 +81,20 @@ abstract class DataField
      */
     public function __construct(array $options = [])
     {
-        if (isset($options['columnName']))
-            $this->columnName = $options['columnName'];
-        if (isset($options['readOnly']))
-            $this->readOnly = $options['readOnly'];
-        if (isset($options['writeOnly']))
-            $this->writeOnly = $options['writeOnly'];
-        if (isset($options['required']))
-            $this->required = $options['required'];
-        if (isset($options['allowNull']))
-            $this->allowNull = $options['allowNull'];
-        if (isset($options['defaultValue']))
-            $this->defaultValue = $options['defaultValue'];
-        if (isset($options['initial']))
-            $this->initial = $options['initial'];
-        if (isset($options['label']))
-            $this->label = $options['label'];
-        if (isset($options['helpText']))
-            $this->helpText = $options['helpText'];
-        if (isset($options['style']))
-            $this->style = $options['style'];
-        if (isset($options['validators']))
-            $this->validators = $options['validators'];
-            
-            // optionally we can store the name interally
-        if (isset($options['name']))
-            $this->name = $options['name'];
+        $this->loadOptions($options);
+    }
+
+    /**
+     * 
+     * @param array $options
+     */
+    protected function loadOptions($options)
+    {
+        foreach($this->fillable as $key)
+        {
+            if (isset($options[$key]))
+                $this->$key = $options[$key];
+        }
     }
 
     public function setName($name)

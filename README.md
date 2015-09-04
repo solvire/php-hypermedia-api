@@ -2,6 +2,8 @@
 ## Repo: php-hypermedia-api
 
 [![Build Status](https://travis-ci.org/solvire/php-hypermedia-api.svg?branch=master)](https://travis-ci.org/solvire/php-hypermedia-api)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/solvire/common-utilities/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/solvire/common-utilities/?branch=master)
+[![Build Status](https://scrutinizer-ci.com/g/solvire/common-utilities/badges/build.png?b=master)](https://scrutinizer-ci.com/g/solvire/common-utilities/build-status/master)
 
 
 ## Hypermedia API 
