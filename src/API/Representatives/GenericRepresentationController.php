@@ -20,14 +20,10 @@ class GenericRepresentationController extends BaseRepresentationController
     ];
 
     protected $recordCount = 0;
-    
+
     protected $hasMorePages = false;
-    
+
     protected $isEmpty = true;
-    
-    
-    
-    
 
     /**
      */
@@ -35,12 +31,12 @@ class GenericRepresentationController extends BaseRepresentationController
     {
         return $this->recordCount();
     }
-    
+
     public function hasMorePages()
     {
         return (boolean) $this->hasMorePages;
     }
-    
+
     public function process()
     {
         $method = $this->request->getMethod();
@@ -71,5 +67,32 @@ class GenericRepresentationController extends BaseRepresentationController
                 throw new \RuntimeException("No Valid Method Provided");
         }
     }
+    
+
+    public function get()
+    {
+        throw new \RuntimeException('Not implemented');
+    }
+    
+    public function post()
+    {
+        throw new \RuntimeException('Not implemented');
+    }
+    
+    public function put()
+    {
+        throw new \RuntimeException('Not implemented');
+    }
+    
+    public function delete()
+    {
+        throw new \RuntimeException('Not implemented');
+    }
+    
+    public function options()
+    {
+        throw new \RuntimeException('Not implemented');
+    }
+    
     
 }

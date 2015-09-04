@@ -16,9 +16,6 @@ use Illuminate\Support\Facades\DB;
  * @package API
  * @namespace Solvire\API
  */
-class HyperBuilder 
+class HyperBuilder
 {
-    
-   
-    
 }

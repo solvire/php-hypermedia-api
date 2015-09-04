@@ -5,7 +5,7 @@ namespace Solvire\API\Exceptions;
  *
  * @author solvire <stevenjscott@gmail.com>
  * @package API
- * @name sapce Solvire\API\Exceptions
+ * @namespace Solvire\API\Exceptions
  * @see http://tools.ietf.org/html/rfc4918#section-11.2
  */
 class InvalidPayloadException extends APIException

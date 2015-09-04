@@ -3,36 +3,37 @@ namespace Solvire\API\Representatives;
 
 use Solvire\API\Serializers\BaseSerializer;
 use Solvire\API\Renderers\BaseRenderer;
+
 /**
- * 
+ *
  * @author solvire <stevenjscott@gmail.com>
  * @package RepresentationControllers
  * @namespace Solvire\API\Representatives
  */
-abstract class BaseRepresentationController 
+abstract class BaseRepresentationController
 {
-    
+
     /**
-     * 
+     *
      * @var Serializer $serializer
      */
     protected $serializer = null;
-    
+
     /**
+     *
      * @var Renderer $renderer
      */
     protected $renderer = null;
-    
+
     /**
-     * 
+     *
      * @var Request $request
      */
     protected $request = null;
-    
 
     /**
-     * 
-     * @param BaseSerializer $serializer
+     *
+     * @param BaseSerializer $serializer            
      * @return \Solvire\API\Representatives\BaseRepresentationController
      */
     public function setSerializer(BaseSerializer $serializer)
@@ -40,9 +41,8 @@ abstract class BaseRepresentationController
         $this->serializer = $serializer;
         return $this;
     }
-    
+
     /**
-     * 
      */
     public function getSerializer()
     {
@@ -50,8 +50,8 @@ abstract class BaseRepresentationController
     }
 
     /**
-     * 
-     * @param BaseRenderer $renderer
+     *
+     * @param BaseRenderer $renderer            
      * @return \Solvire\API\Representatives\BaseRepresentationController
      */
     public function setRenderer(BaseRenderer $renderer)
@@ -59,19 +59,17 @@ abstract class BaseRepresentationController
         $this->renderer = $renderer;
         return $this;
     }
-    
+
     /**
-     *
      */
     public function getRenderer()
     {
         return $this->renderer;
     }
-    
-    
+
     /**
      *
-     * @param mixed $request
+     * @param mixed $request            
      * @return \Solvire\API\Representatives\RepresentationControllers
      */
     public function setRequest($request)
@@ -79,15 +77,11 @@ abstract class BaseRepresentationController
         $this->request = $request;
         return $this;
     }
-    
+
     /**
-     *
      */
     public function getRequest()
     {
         return $this->request;
     }
-    
-    
-    
 }

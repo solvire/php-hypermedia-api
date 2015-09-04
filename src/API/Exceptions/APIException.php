@@ -10,7 +10,7 @@ namespace Solvire\API\Exceptions;
  *
  * @author solvire <stevenjscott@gmail.com>
  * @package API
- * @name sapce Solvire\API\Exceptions
+ * @namespace Solvire\API\Exceptions
  */
 abstract class APIException extends \RuntimeException
 {
@@ -29,7 +29,7 @@ abstract class APIException extends \RuntimeException
      * @param array $errors            
      * @param array $headers            
      */
-    public function __construct($message, $statusCode = 0,\Exception $previous = null, array $errors = [], array $headers = [])
+    public function __construct($message, $statusCode = 0, \Exception $previous = null, array $errors = [], array $headers = [])
     {
         $this->statusCode = $statusCode;
         $this->headers = $headers;
