@@ -7,15 +7,17 @@ use Solvire\API\Serializers\DataFields\IPAddressField;
 use Solvire\API\Serializers\DataFields\DateTimeField;
 
 /**
- * making the class conrete for testing. 
+ * making the class conrete for testing.
+ *
+ * @group Serializers
  *
  * @author solvire <stevenjscott@gmail.com>
  * @package Serializers
- * @group Serializers
  * @namespace Solvire\API\Serializers
  */
 class ArraySerializerConcrete extends ArraySerializer
 {
+
     public function initDataFields()
     {
         $this->addField('status', new CharField());

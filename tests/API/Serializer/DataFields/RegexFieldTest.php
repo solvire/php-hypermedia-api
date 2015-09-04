@@ -1,17 +1,19 @@
 <?php
 namespace Solvire\API\Serializers\DataFields;
 
-
 /**
+ *
+ *
+ *
+ * @group DataFields
  *
  * @author solvire <stevenjscott@gmail.com>
  * @package DataFields
- * @group DataFields
  * @namespace Solvire\API\Serializers\DataFields
  */
 class RegexFieldTest extends \BaseTestCase
 {
-    
+
     /**
      * @expectedException \RuntimeException
      */
@@ -21,14 +23,12 @@ class RegexFieldTest extends \BaseTestCase
         $rx->setData('test');
     }
 
-     /**
-      * @expectedException \RuntimeException
-      * 
-      */
+    /**
+     * @expectedException \RuntimeException
+     */
     public function testRegexFieldGetDataNotWorking()
     {
         $rx = new RegexField();
         $rx->getData();
     }
-    
 }

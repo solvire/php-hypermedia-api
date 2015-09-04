@@ -1,16 +1,19 @@
 <?php
 namespace Solvire\API\Serializers\DataFields;
 
-
 /**
+ *
+ *
+ *
+ * @group DataFields
  *
  * @author solvire <stevenjscott@gmail.com>
  * @package DataFields
- * @group DataFields
  * @namespace Solvire\API\Serializers\DataFields
  */
 class IntegerFieldTest extends \BaseTestCase
 {
+
     /**
      * @expectedException \RuntimeException
      */
@@ -21,5 +24,4 @@ class IntegerFieldTest extends \BaseTestCase
         $this->assertTrue(is_int($dec->getData()));
         $dec->setData('10');
     }
-    
 }

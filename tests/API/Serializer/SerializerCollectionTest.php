@@ -1,26 +1,28 @@
 <?php
 namespace Solvire\API\Serializers;
 
-
 use Solvire\API\Serializers\BaseSerializer;
 use PhpCollection\Sequence;
 
+/**
+ * 
+ * @author solvire <stevenjscott@gmail.com>
+ * @package Serializers
+ * @namespace Solvire\API\Serializers
+ */
 class SerializerCollection extends Sequence
 {
 
     /**
-     *
-     *
      * There isn't much to ordering here.
      * Just use a numeric key and we will try tro sort later
      *
-     * @param
-     *            array of parameters $sequence
+     * @param array $serializers
      */
     public function __construct($serializers = [])
     {
         foreach ($serializers as $key => $serializer) {
-            if (!($serializer instanceof BaseSerializer)) {
+            if (! ($serializer instanceof BaseSerializer)) {
                 throw new Exceptions\InvalidParameterException("Only search paramater objects allowed here.");
             }
         }
@@ -28,6 +30,7 @@ class SerializerCollection extends Sequence
     }
 
     /**
+     *
      * @return array
      */
     public function toArray()
@@ -37,7 +40,7 @@ class SerializerCollection extends Sequence
 
     public function add($serializer)
     {
-        if (!($serializer instanceof BaseSerializer)) {
+        if (! ($serializer instanceof BaseSerializer)) {
             throw new Exceptions\InvalidParameterException("Only search paramater objects allowed here.");
         }
         return parent::add($serializer);

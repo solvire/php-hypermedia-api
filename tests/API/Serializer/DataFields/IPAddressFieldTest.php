@@ -1,22 +1,22 @@
 <?php
 namespace Solvire\API\Serializers\DataFields;
 
-
 /**
- * IP Address is stored as a binary structure. 
- * 
+ * IP Address is stored as a binary structure.
+ *
+ *
+ * @group DataFields
+ *
  * @see http://php.net/manual/en/function.inet-pton.php
  * @see http://php.net/manual/en/function.inet-ntop.php
  * @author solvire <stevenjscott@gmail.com>
  * @package DataFields
- * @group DataFields 
  * @namespace Solvire\API\Serializers\DataFields
  */
 class IPAddressFieldTest extends \BaseTestCase
 {
-    
+
     /**
-     * 
      */
     public function testCanSetIPAddressFieldData()
     {
@@ -30,8 +30,5 @@ class IPAddressFieldTest extends \BaseTestCase
         
         $ip->setData($ipv6);
         $this->assertEquals($ip->getData(), $ipv6);
-        
     }
-    
-    
 }

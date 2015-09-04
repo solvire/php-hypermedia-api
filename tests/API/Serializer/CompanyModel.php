@@ -1,9 +1,12 @@
 <?php
-
 namespace Solvire\API\Serializers;
 
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * 
+ * @author solvire <stevenjscott@gmail.com>
+ */
 class CompanyModel extends Model
 {
 

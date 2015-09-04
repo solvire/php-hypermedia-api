@@ -2,15 +2,16 @@
 namespace Solvire\API\Serializers;
 
 use Carbon\Carbon;
-include_once(realpath( __DIR__ . '/ArraySerializerConcrete.php'));
+include_once (realpath(__DIR__ . '/ArraySerializerConcrete.php'));
 
 /**
  * Just map a static output
  * Methods are only GET
  *
+ * @group Serializers
+ * 
  * @author solvire <stevenjscott@gmail.com>
  * @package Serializers
- *          @group Serializers
  * @namespace Solvire\API\Serializers
  */
 class ArraySerializerTest extends \BaseTestCase

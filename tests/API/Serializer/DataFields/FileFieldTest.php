@@ -1,17 +1,19 @@
 <?php
 namespace Solvire\API\Serializers\DataFields;
 
-
 /**
+ *
+ *
+ *
+ * @group DataFields
  *
  * @author solvire <stevenjscott@gmail.com>
  * @package DataFields
- * @group DataFields
  * @namespace Solvire\API\Serializers\DataFields
  */
 class FileFieldTest extends \BaseTestCase
 {
-    
+
     /**
      * @expectedException \RuntimeException
      */
@@ -21,10 +23,9 @@ class FileFieldTest extends \BaseTestCase
         $f->setData('test');
     }
 
-     /**
-      * @expectedException \RuntimeException
-      * 
-      */
+    /**
+     * @expectedException \RuntimeException
+     */
     public function testFileFieldGetDataNotWorking()
     {
         $f = new FileField();

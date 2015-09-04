@@ -3,9 +3,12 @@ namespace Solvire\API\Serializers\DataFields;
 
 /**
  *
+ *
+ *
+ * @group DataFields
+ *
  * @author solvire <stevenjscott@gmail.com>
  * @package DataFields
- * @group DataFields
  * @namespace Solvire\API\Serializers\DataFields
  */
 class CharFieldTest extends \BaseTestCase
@@ -40,9 +43,11 @@ class CharFieldTest extends \BaseTestCase
         $this->assertEquals($char->getData(), 'test_data');
         $char->setName('test');
         
-        $char->setErrorMessages(['error'=>'error message']);
-        $this->assertTrue(is_array($char->getErrorMessages()) );
-        $this->assertEquals('test',$char->getName());
+        $char->setErrorMessages([
+            'error' => 'error message'
+        ]);
+        $this->assertTrue(is_array($char->getErrorMessages()));
+        $this->assertEquals('test', $char->getName());
     }
 
     protected function getOptions()

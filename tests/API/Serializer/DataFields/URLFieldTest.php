@@ -1,19 +1,20 @@
 <?php
 namespace Solvire\API\Serializers\DataFields;
 
-
 /**
  * TODO need to find a library that handles url parsing well
  *
+ * @group DataFields
+ *
  * @author solvire <stevenjscott@gmail.com>
  * @package DataFields
- * @group DataFields
  * @namespace Solvire\API\Serializers\DataFields
  */
 class URLFieldTest extends \BaseTestCase
 {
+
     /**
-     * @expectedException \RuntimeException 
+     * @expectedException \RuntimeException
      */
     public function testCanSetUrlData()
     {
@@ -27,7 +28,5 @@ class URLFieldTest extends \BaseTestCase
         $u->setData($url2);
         $this->assertEquals($u->getData(), $url2);
         $u->setData($url3);
-        
     }
-    
 }

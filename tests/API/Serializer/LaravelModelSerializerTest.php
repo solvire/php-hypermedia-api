@@ -2,9 +2,8 @@
 namespace Solvire\API\Serializers;
 
 use Illuminate\Database\Eloquent\Model;
-
-require_once(realpath(__DIR__ . '/CompanyModel.php'));
-require_once(realpath(__DIR__ . '/LaravelModelSerializerConcrete.php'));
+require_once (realpath(__DIR__ . '/CompanyModel.php'));
+require_once (realpath(__DIR__ . '/LaravelModelSerializerConcrete.php'));
 
 /**
  * Map a Laravel 5.x model to a serializer
@@ -19,7 +18,6 @@ class LaravelModelSerializerTest extends \BaseTestCase
 
     public function testCanSerializeLaravelUserModel()
     {
-        
         $ser = new LaravelModelSerializerConcrete();
         
         $co = new CompanyModel();
@@ -28,7 +26,7 @@ class LaravelModelSerializerTest extends \BaseTestCase
         $co->State = 'CA';
         $co->zipcode = '91361';
         $co->latitude = 34.1234;
-        $co->longitude = -119.3908;
+        $co->longitude = - 119.3908;
         $co->email = 'test@testdomain.com';
         
         $ser->setModel($co);
@@ -43,7 +41,5 @@ class LaravelModelSerializerTest extends \BaseTestCase
         
         $ef = $ser->getField('email');
         $this->assertInstanceOf('Solvire\API\Serializers\DataFields\EmailField', $ef);
-
     }
-    
 }

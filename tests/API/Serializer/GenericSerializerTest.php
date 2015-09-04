@@ -2,26 +2,25 @@
 namespace Solvire\API\Serializers;
 
 /**
- * For testing the items in the base or otherwise that haven't been covered 
+ * For testing the items in the base or otherwise that haven't been covered
+ *
+ * @group Serializers
  *
  * @author solvire <stevenjscott@gmail.com>
  * @package Serializers
- * @group Serializers
  * @namespace Solvire\API\Serializers
  */
 class GenericSerializerTest extends \BaseTestCase
 {
 
-    
     /**
-     * @expectedException \RuntimeException 
+     * @expectedException \RuntimeException
      */
     public function testCannotSaveBaseSerializer()
     {
         $ars = new ArraySerializerConcrete();
         $ars->save();
     }
-    
 
     /**
      * @expectedException \RuntimeException
@@ -31,7 +30,6 @@ class GenericSerializerTest extends \BaseTestCase
         $ars = new ArraySerializerConcrete();
         $ars->update();
     }
-    
 
     /**
      * @expectedException \RuntimeException

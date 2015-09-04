@@ -3,10 +3,13 @@ namespace Solvire\API\Serializers\DataFields;
 
 /**
  *
+ *
+ *
+ * @group DataFields
+ *
  * @author solvire <stevenjscott@gmail.com>
  * @package DataFields
- * @group DataFields
- * @name sapce Solvire\API\Serializers\DataFields
+ * @namespace Solvire\API\Serializers\DataFields
  */
 class TimeFieldTest extends \BaseTestCase
 {
@@ -19,10 +22,9 @@ class TimeFieldTest extends \BaseTestCase
         $t = new TimeField();
         $t->setData('test');
     }
-    
+
     /**
      * @expectedException \RuntimeException
-     *
      */
     public function testTimeFieldGetDataNotWorking()
     {
