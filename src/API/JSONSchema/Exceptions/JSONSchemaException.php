@@ -8,6 +8,6 @@ namespace Solvire\API\JSONSchema\Exceptions;
  * @package JSONSchema
  * @namespace Solvire\API\JSONSchema\Exceptions
  */
-class JSONSchemaException
+class JSONSchemaException extends \RuntimeException
 {
 }

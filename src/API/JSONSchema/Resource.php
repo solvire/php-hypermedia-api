@@ -14,14 +14,19 @@ use Solvire\API\Serializers\BaseSerializer;
  */
 class Resource 
 {
+    /**
+     * 
+     * @var string
+     */
+    protected $name = null;
     
     /**
      * pulled in from the API 
      * every resource needs to have a serializer attached to it 
      * 
-     * @var Serializer Collection  
+     * @var BaseSerializer  
      */
-    protected $serializers = null;
+    protected $serializer = null;
     
     /**
      * can either be the ID or some other unique name 
@@ -29,19 +34,32 @@ class Resource
      */
     protected $name = null;
     
-    public function __construct($name = '', $serializers = null)
+    /**
+     * 
+     * @param string $name
+     * @param BaseSerializer $serializers
+     */
+    public function __construct($name = '',$serializer = null)
     {
         $this->name = $name;
-        foreach($serializers as $serializer)
-            $this->setSerializer($serializer);
+        $this->setSerializer($serializer);
     }
     
+    /**
+     * 
+     * @param string $name
+     * @return \Solvire\API\JSONSchema\Resource
+     */
     public function setName($name)
     {
         $this->name = $name;
         return $this;
     }
     
+    /**
+     * 
+     * @return string
+     */
     public function getName()
     {
         return $this->name;

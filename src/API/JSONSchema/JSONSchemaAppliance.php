@@ -84,9 +84,7 @@ class JSONSchemaAppliance implements Schemable
     {
         if($this->allSet())
         {
-            $schema = $this->base->toSchema();
-//             ksort($schema);
-            return $schema;
+            return $this->base->toSchema();
         }
     }
 }

@@ -15,18 +15,16 @@ class ResourceCollection extends Sequence
 
     /**
      *
-     *
      * There isn't much to ordering here.
      * Just use a numeric key and we will try tro sort later
      *
-     * @param
-     *            array of parameters $sequence
+     * @param array $resources
      */
     public function __construct($resources = [])
     {
         foreach ($resources as $key => $resource) {
-            if (!($resource instanceof Solvire\JSONSchema\Resource)) {
-                throw new Exceptions\InvalidParameterException("Only search paramater objects allowed here.");
+            if (!($resource instanceof Resource)) {
+                throw new \RuntimeException("Only Resource objects allowed here.");
             }
         }
         parent::__construct($resources);
@@ -41,10 +39,15 @@ class ResourceCollection extends Sequence
         return $this->all();
     }
 
+    /**
+     * 
+     * @param Resource $resource
+     * @throws \RuntimeException
+     */
     public function add($resource)
     {
-        if (!($resource instanceof Solvire\JSONSchema\Resource)) {
-            throw new Exceptions\InvalidParameterException("Only search paramater objects allowed here.");
+        if (!($resource instanceof Resource)) {
+            throw new \RuntimeException("Only Resource objects allowed here.");
         }
         return parent::add($resource);
     }
