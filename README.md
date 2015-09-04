@@ -2,7 +2,7 @@
 ## Repo: php-hypermedia-api
 
 [![Build Status](https://travis-ci.org/solvire/php-hypermedia-api.svg?branch=master)](https://travis-ci.org/solvire/php-hypermedia-api)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/solvire/php-hypermedia-api/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/solvire/php-hypermedia-api/?branch=master)
+[![Latest Stable Version](https://poser.pugx.org/solvire/php-hypermedia-api/v/stable)](https://packagist.org/packages/solvire/php-hypermedia-api)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/solvire/php-hypermedia-api/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/solvire/php-hypermedia-api/?branch=master)
 [![Build Status](https://scrutinizer-ci.com/g/solvire/php-hypermedia-api/badges/build.png?b=master)](https://scrutinizer-ci.com/g/solvire/php-hypermedia-api/build-status/master)
 [![License](https://poser.pugx.org/solvire/php-hypermedia-api/license)](https://packagist.org/packages/solvire/php-hypermedia-api)
