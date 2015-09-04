@@ -6,4 +6,4 @@
 if(!defined('APPLICATION_NAME')) define('APPLICATION_NAME','php-hypermedia-api');
 
 require_once realpath( __DIR__ . '/../vendor/autoload.php');
-require_once 'ModelTestCase.php';
+require_once realpath( __DIR__ . '/BaseTestCase.php' );
