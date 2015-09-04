@@ -15,7 +15,7 @@ interface Optionable
     /**
      * 
      */
-    public function optionable();
+    public function options();
     
     
 }

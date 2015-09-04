@@ -111,39 +111,9 @@ abstract class ListRenderer extends GenericRenderer implements Getable
         
         return ['items' => $retarr];
     }
-    
-    
-    /*
-        HTTP/1.1 200 OK
-        {
-          "href" : "https://api.mycompany.com/v1/users?offset=50&amp;limit=50"
-          "offset": 50,
-          "limit": 50,
-          “first”: {
-              “href”: "https://api.mycompany.com/v1/users"
-          },
-           “prev”: {
-              “href”: "https://api.mycompany.com/v1/users"
-          },
-          “next”: {
-              “href”: "https://api.mycompany.com/v1/users?offset=100&amp;limit=50"
-          },
-          “last”: {
-              “href”: "https://api.mycompany.com/v1/users?offset=50&amp;limit=50"
-          },
-          "items": [
-            {
-              ... user 51 name/value pairs ...
-            },
-            ...,
-            {
-              ... user 100 name/value pairs ...
-            }
-          }
-        }
-     */
-    
+
     /**
+     *
      * @see https://google-styleguide.googlecode.com/svn/trunk/jsoncstyleguide.xml#Reserved_Property_Names_for_Paging
      */
     public function generateLinks()
@@ -154,31 +124,26 @@ abstract class ListRenderer extends GenericRenderer implements Getable
         
         $retarr['itemsPerPage'] = $this->getPaginationLimit();
         
-        // TODO get the ID of the starting element 
-//         $retarr['startIndex'] = $this->resultArray[0];
+        // TODO get the ID of the starting element
+        // $retarr['startIndex'] = $this->resultArray[0];
         
         $retarr['totalItems'] = $this->total();
         
-        // TODO fix the paging template for links 
-//         $retarr['pagingLinkTemplate'] = $this->resultSet
+        // TODO fix the paging template for links
+        // $retarr['pagingLinkTemplate'] = $this->resultSet
         
-        // 1 based 
+        // 1 based
         $retarr['pageIndex'] = $this->currentPage();
-        
         
         $retarr['totalPages'] = $this->lastPage();
         
-        
-        if($this->hasPages())
-        {
-            // TODO need to set up the current page link 
-//             $retarr['selfLink'] 
+        if ($this->hasPages()) {
+            // TODO need to set up the current page link
+            // $retarr['selfLink']
             $retarr['nextLink'] = $this->nextPageUrl();
             $retarr['previousLink'] = $this->previousPageUrl();
-            
         }
         
         return $retarr;
-            
     }
 }

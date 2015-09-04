@@ -15,7 +15,7 @@ interface Deletable
     /**
      * 
      */
-    public function deletable();
+    public function delete();
     
     
 }

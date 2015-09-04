@@ -24,7 +24,7 @@ abstract class BaseRenderer
     /**
      * 
      * @param BaseSerializer $serializer
-     * @return \Solvire\API\Serializers\BaseSerializer
+     * @return \Solvire\API\Renderers\BaseRenderer
      */
     public function setSerializer(BaseSerializer $serializer)
     {
