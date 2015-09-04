@@ -9,7 +9,7 @@ namespace Solvire\API\Serializers\DataFields;
  * @group DataFields
  * @namespace Solvire\API\Serializers\DataFields
  */
-class IntegerFieldTest extends \GenericTestCase
+class IntegerFieldTest extends \BaseTestCase
 {
     /**
      * @expectedException \RuntimeException

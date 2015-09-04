@@ -9,7 +9,7 @@ namespace Solvire\API\Serializers\DataFields;
  * @group DataFields
  * @namespace Solvire\API\Serializers\DataFields
  */
-class ImageFieldTest extends \GenericTestCase
+class ImageFieldTest extends \BaseTestCase
 {
     
     /**

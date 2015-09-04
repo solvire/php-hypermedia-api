@@ -10,7 +10,7 @@ namespace Solvire\API\Serializers\DataFields;
  * @group DataFields
  * @namespace Solvire\API\Serializers\DataFields
  */
-class URLFieldTest extends \GenericTestCase
+class URLFieldTest extends \BaseTestCase
 {
     /**
      * @expectedException \RuntimeException 

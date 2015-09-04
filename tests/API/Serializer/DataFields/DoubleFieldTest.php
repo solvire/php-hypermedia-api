@@ -8,7 +8,7 @@ namespace Solvire\API\Serializers\DataFields;
  * @package DataFields
  * @namespace Solvire\API\Serializers\DataFields
  */
-class DoubleFieldTest extends \GenericTestCase
+class DoubleFieldTest extends \BaseTestCase
 {
     
     public function testCanSetData()

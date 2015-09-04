@@ -9,7 +9,7 @@ namespace Solvire\API\Serializers\DataFields;
  * @group DataFields
  * @namespace Solvire\API\Serializers\DataFields
  */
-class UUIDFieldTest extends \GenericTestCase
+class UUIDFieldTest extends \BaseTestCase
 {
     
     /**

@@ -8,7 +8,7 @@ namespace Solvire\API\Serializers\DataFields;
  * @package DataFields
  * @namespace Solvire\API\Serializers\DataFields
  */
-class BooleanFieldTest extends \GenericTestCase
+class BooleanFieldTest extends \BaseTestCase
 {
     
     public function testCanSetData()

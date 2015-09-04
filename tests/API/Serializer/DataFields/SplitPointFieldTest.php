@@ -8,7 +8,7 @@ namespace Solvire\API\Serializers\DataFields;
  * @group DataFields
  * @namespace Solvire\API\Serializers\DataFields
  */
-class SplitPointFieldTest extends \GenericTestCase
+class SplitPointFieldTest extends \BaseTestCase
 {
     protected $requiredFields = ['latitudeColumn'=>'latitude','longitudeColumn'=>'longitude'];
 

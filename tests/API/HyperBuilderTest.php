@@ -1,14 +1,12 @@
 <?php
-namespace LeadFerret\Lib\API;
-
-use LeadFerret\Models\Contact;
+namespace Solvire\API;
 
 
 /**
  * @author solvire <stevenjscott@gmail.com>
  * @group API
  * @package API
- * @namespace LeadFerret\Lib\API
+ * @namespace Solvire\API
  */
 class HyperBuilderTest extends  \BaseTestCase
 {

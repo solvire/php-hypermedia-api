@@ -9,7 +9,7 @@ namespace Solvire\API\Serializers;
  * @group Serializers
  * @namespace Solvire\API\Serializers
  */
-class GenericSerializerTest extends \GenericTestCase
+class GenericSerializerTest extends \BaseTestCase
 {
 
     

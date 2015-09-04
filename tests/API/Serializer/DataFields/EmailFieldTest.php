@@ -10,7 +10,7 @@ use Respect\Validation\Validator as v;
  * @group DataFields
  * @namespace Solvire\API\Serializers\DataFields
  */
-class EmailFieldTest extends \GenericTestCase
+class EmailFieldTest extends \BaseTestCase
 {
 
     /**

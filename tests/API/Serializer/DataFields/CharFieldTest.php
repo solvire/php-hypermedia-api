@@ -8,7 +8,7 @@ namespace Solvire\API\Serializers\DataFields;
  * @group DataFields
  * @namespace Solvire\API\Serializers\DataFields
  */
-class CharFieldTest extends \GenericTestCase
+class CharFieldTest extends \BaseTestCase
 {
 
     public function testCanCreateCharWithOptions()

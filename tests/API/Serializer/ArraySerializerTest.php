@@ -13,7 +13,7 @@ include_once(realpath( __DIR__ . '/ArraySerializerConcrete.php'));
  *          @group Serializers
  * @namespace Solvire\API\Serializers
  */
-class ArraySerializerTest extends \GenericTestCase
+class ArraySerializerTest extends \BaseTestCase
 {
 
     public function testCanBuildArraySerializer()

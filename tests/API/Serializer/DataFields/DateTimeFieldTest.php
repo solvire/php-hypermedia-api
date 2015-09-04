@@ -10,7 +10,7 @@ use Carbon\Carbon;
  * @package DataFields
  * @namespace Solvire\API\Serializers\DataFields
  */
-class DateTimeFieldTest extends \GenericTestCase
+class DateTimeFieldTest extends \BaseTestCase
 {
     
     protected $cast = 'string';

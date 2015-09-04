@@ -14,7 +14,7 @@ require_once(realpath(__DIR__ . '/LaravelModelSerializerConcrete.php'));
  * @package Serializers
  * @namespace Solvire\API\Serializers
  */
-class LaravelModelSerializerTest extends \GenericTestCase
+class LaravelModelSerializerTest extends \BaseTestCase
 {
 
     public function testCanSerializeLaravelUserModel()

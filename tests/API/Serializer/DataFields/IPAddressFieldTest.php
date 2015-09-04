@@ -12,7 +12,7 @@ namespace Solvire\API\Serializers\DataFields;
  * @group DataFields 
  * @namespace Solvire\API\Serializers\DataFields
  */
-class IPAddressFieldTest extends \GenericTestCase
+class IPAddressFieldTest extends \BaseTestCase
 {
     
     /**

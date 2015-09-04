@@ -8,7 +8,7 @@ namespace Solvire\API\Serializers\DataFields;
  * @group DataFields
  * @name sapce Solvire\API\Serializers\DataFields
  */
-class TimeFieldTest extends \GenericTestCase
+class TimeFieldTest extends \BaseTestCase
 {
 
     /**

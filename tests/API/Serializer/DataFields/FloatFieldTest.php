@@ -9,7 +9,7 @@ namespace Solvire\API\Serializers\DataFields;
  * @package DataFields
  * @namespace Solvire\API\Serializers\DataFields
  */
-class FloatFieldTest extends \GenericTestCase
+class FloatFieldTest extends \BaseTestCase
 {
     
     protected $cast = 'float';
