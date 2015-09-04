@@ -67,9 +67,6 @@ abstract class LaravelModelSerializer extends BaseSerializer
         if (! $model instanceof Model)
             throw new \RuntimeException("the object must be of type Illuminate\Database\Eloquent\Model ");
             
-            // get the fields that are fillable
-        $fields = $model->getFillable();
-        
         // loop through all the set fields in the collection
         // if they have a matching name then load them up from the model
         // if they have a matching columnName then find the value and load that up instead

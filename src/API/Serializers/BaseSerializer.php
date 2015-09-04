@@ -74,7 +74,7 @@ abstract class BaseSerializer implements \JsonSerializable
     /**
      * this is where your definitions will go.
      */
-    public abstract function initDataFields();
+    abstract public function initDataFields();
 
     public function setInitialData($initialData)
     {
@@ -100,23 +100,10 @@ abstract class BaseSerializer implements \JsonSerializable
     }
 
     /**
-     * this needs to do a lot.
-     *
-     * parsing. mapping etc
-     *
-     *
-     * @param unknown $data            
-     */
-//     public function fillData($data)
-//     {
-//         $this->data = $data;
-//     }
-    
-    /**
      * not the same as fill data - it should prob be depricated 
      * @param unknown $data
      */
-    public abstract function loadData($data);
+    abstract public function loadData($data);
 
     /**
      *
@@ -149,5 +136,5 @@ abstract class BaseSerializer implements \JsonSerializable
      * 
      * @see JsonSerializable::jsonSerialize()
      */
-    public abstract function jsonSerialize();
+    abstract public function jsonSerialize();
 }

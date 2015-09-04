@@ -108,12 +108,12 @@ abstract class DataField
         return $this->name;
     }
 
-    public abstract function setData($data);
+    abstract public function setData($data);
 
     /**
      * returns the data in the most usable format
      */
-    public abstract function getData();
+    abstract public function getData();
 
     /**
      * returns the data in a format that is probably most storable

@@ -48,7 +48,7 @@ class DateTimeField extends DataField
             } elseif ($data instanceof \DateTime) {
                 $date = Carbon::instance($data);
             }
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             throw new \RuntimeException('DateTimeField data must be a string representation of a date/time object in format: ' . $this->format, $e);
         }
         
