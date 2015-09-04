@@ -1,12 +1,12 @@
 <?php
-namespace LeadFerret\Lib\API\JSONSchema;
+namespace Solvire\API\JSONSchema;
 
 /**
  * returns the array/objects for json serialization 
  * 
  * @author solvire <stevenjscott@gmail.com>
  * @package JSONSchema
- * @namespace LeadFerret\Lib\API\JSONSchema
+ * @namespace Solvire\API\JSONSchema
  */
 interface Schemable
 {

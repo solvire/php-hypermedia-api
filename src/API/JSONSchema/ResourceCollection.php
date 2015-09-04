@@ -1,5 +1,5 @@
 <?php
-namespace LeadFerret\Lib\API\JSONSchema;
+namespace Solvire\API\JSONSchema;
 
 
 use PhpCollection\Sequence;
@@ -8,7 +8,7 @@ use PhpCollection\Sequence;
  * 
  * @author solvire <stevenjscott@gmail.com>
  * @package JSONSchema
- * @namespace LeadFerret\Lib\API\JSONSchema
+ * @namespace Solvire\API\JSONSchema
  */
 class ResourceCollection extends Sequence
 {
@@ -25,7 +25,7 @@ class ResourceCollection extends Sequence
     public function __construct($resources = [])
     {
         foreach ($resources as $key => $resource) {
-            if (!($resource instanceof LeadFerret\Lib\JSONSchema\Resource)) {
+            if (!($resource instanceof Solvire\JSONSchema\Resource)) {
                 throw new Exceptions\InvalidParameterException("Only search paramater objects allowed here.");
             }
         }
@@ -43,7 +43,7 @@ class ResourceCollection extends Sequence
 
     public function add($resource)
     {
-        if (!($resource instanceof LeadFerret\Lib\JSONSchema\Resource)) {
+        if (!($resource instanceof Solvire\JSONSchema\Resource)) {
             throw new Exceptions\InvalidParameterException("Only search paramater objects allowed here.");
         }
         return parent::add($resource);

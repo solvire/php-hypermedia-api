@@ -1,5 +1,5 @@
 <?php
-namespace LeadFerret\Lib\API\JSONSchema;
+namespace Solvire\API\JSONSchema;
 
 /**
  * Represents the list of Auth types that can be presented by this schema. 
@@ -7,7 +7,7 @@ namespace LeadFerret\Lib\API\JSONSchema;
  * 
  * @author solvire <stevenjscott@gmail.com>
  * @package JSONSchema
- * @namespace LeadFerret\Lib\API\JSONSchema
+ * @namespace Solvire\API\JSONSchema
  */
 class Auth
 {

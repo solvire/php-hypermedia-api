@@ -1,5 +1,5 @@
 <?php
-namespace LeadFerret\Lib\API\JSONSchema;
+namespace Solvire\API\JSONSchema;
 
 /**
  * Probably not the best way to deal with this
@@ -7,7 +7,7 @@ namespace LeadFerret\Lib\API\JSONSchema;
  * 
  * @author solvire <stevenjscott@gmail.com>
  * @package JSONSchema
- * @namespace LeadFerret\Lib\API\JSONSchema
+ * @namespace Solvire\API\JSONSchema
  */
 class AuthType
 {

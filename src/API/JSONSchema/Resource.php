@@ -1,7 +1,7 @@
 <?php
-namespace LeadFerret\Lib\API\JSONSchema;
+namespace Solvire\API\JSONSchema;
 
-use LeadFerret\Lib\API\Serializers\BaseSerializer;
+use Solvire\API\Serializers\BaseSerializer;
 
 
 /**
@@ -10,7 +10,7 @@ use LeadFerret\Lib\API\Serializers\BaseSerializer;
  * 
  * @author solvire <stevenjscott@gmail.com>
  * @package JSONSchema
- * @namespace LeadFerret\Lib\API\JSONSchema
+ * @namespace Solvire\API\JSONSchema
  */
 class Resource 
 {

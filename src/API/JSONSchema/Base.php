@@ -1,14 +1,14 @@
 <?php
-namespace LeadFerret\Lib\API\JSONSchema;
+namespace Solvire\API\JSONSchema;
 
 use LF\Utility\OptionsChecker as Ch;
-use LF\Utility\Environment as Ev;
+use Solvire\Application as Ev;
 
 /**
  * Base of the schema
  * @author solvire <stevenjscott@gmail.com>
  * @package JSONSchema
- * @namespace LeadFerret\Lib\API\JSONSchema
+ * @namespace Solvire\API\JSONSchema
  */
 class Base implements Schemable
 {
@@ -133,7 +133,7 @@ class Base implements Schemable
     /**
      * 
      * (non-PHPdoc)
-     * @see \LeadFerret\Lib\API\JSONSchema\Schemable::allSet()
+     * @see \Solvire\API\JSONSchema\Schemable::allSet()
      * @returns true or blows up
      */
     public function allSet()
@@ -155,7 +155,7 @@ class Base implements Schemable
     /**
      * dish it up 
      * (non-PHPdoc)
-     * @see \LeadFerret\Lib\API\JSONSchema\Schemable::toSchema()
+     * @see \Solvire\API\JSONSchema\Schemable::toSchema()
      */
     public function toSchema()
     {

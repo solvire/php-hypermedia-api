@@ -1,14 +1,14 @@
 <?php
-namespace LeadFerret\Lib\API\JSONSchema;
+namespace Solvire\API\JSONSchema;
 
 use LF\Utility\OptionsChecker as Ch;
-use LF\Utility\Environment as Ev;
+use Solvire\Application as Ev;
 
 /**
  *
  * @author solvire <stevenjscott@gmail.com>
  * @package JSONSchema
- * @name sapce LeadFerret\Lib\API\JSONSchema
+ * @name sapce Solvire\API\JSONSchema
  */
 class JSONSchemaAppliance implements Schemable
 {
@@ -28,8 +28,8 @@ class JSONSchemaAppliance implements Schemable
     
     /**
      * 
-     * @param \LeadFerret\Lib\API\JSONSchema\Resource $resource
-     * @return \LeadFerret\Lib\API\JSONSchema\JSONSchemaAppliance
+     * @param \Solvire\API\JSONSchema\Resource $resource
+     * @return \Solvire\API\JSONSchema\JSONSchemaAppliance
      */
     public function registerResource(Resource $resource)
     {
@@ -72,7 +72,7 @@ class JSONSchemaAppliance implements Schemable
     
     /**
      * (non-PHPdoc)
-     * @see \LeadFerret\Lib\API\JSONSchema\Schemable::allSet()
+     * @see \Solvire\API\JSONSchema\Schemable::allSet()
      */
     public function allSet()
     {
