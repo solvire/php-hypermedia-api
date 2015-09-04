@@ -27,7 +27,7 @@ class DateField extends DataField
      * the return type should be definable and it's not yet
      *
      * (non-PHPdoc)
-     * 
+     *
      * @see \Solvire\API\Serializers\DataFields\DataField::setData()
      * @param
      *            \DateTime
@@ -42,7 +42,7 @@ class DateField extends DataField
 
     /**
      * This is a char so it will always be just a string
-     * 
+     *
      * @return Carbon or DateTime object
      */
     public function getData()

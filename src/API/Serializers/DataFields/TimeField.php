@@ -5,7 +5,7 @@ namespace Solvire\API\Serializers\DataFields;
  *
  * @author solvire <stevenjscott@gmail.com>
  * @package DataFields
- * @name sapce Solvire\API\Serializers\DataFields
+ * @namespace Solvire\API\Serializers\DataFields
  */
 class TimeField extends DataField
 {
@@ -14,7 +14,7 @@ class TimeField extends DataField
     {
         throw new \RuntimeException('not implemented');
     }
-    
+
     /**
      * This is a char so it will always be just a string
      */

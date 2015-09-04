@@ -15,7 +15,7 @@ abstract class LaravelModelSerializer extends BaseSerializer
 {
 
     /**
-     * 
+     *
      * @var Model
      */
     protected $model = null;
@@ -30,9 +30,9 @@ abstract class LaravelModelSerializer extends BaseSerializer
         $this->model = $model;
         return $this;
     }
-    
+
     /**
-     * 
+     *
      * @return Model
      */
     public function getModel()
@@ -67,9 +67,9 @@ abstract class LaravelModelSerializer extends BaseSerializer
         if (! $model instanceof Model)
             throw new \RuntimeException("the object must be of type Illuminate\Database\Eloquent\Model ");
             
-        // loop through all the set fields in the collection
-        // if they have a matching name then load them up from the model
-        // if they have a matching columnName then find the value and load that up instead
+            // loop through all the set fields in the collection
+            // if they have a matching name then load them up from the model
+            // if they have a matching columnName then find the value and load that up instead
         $dfc = $this->getDataFieldCollection();
         foreach ($dfc as $name => $dataField) {
             $col = $dataField->columnName();
@@ -77,7 +77,7 @@ abstract class LaravelModelSerializer extends BaseSerializer
             // i don't think laravel has a point type data field
             // we need to check to see if it's a point field split and combine it
             if ($dataField instanceof SplitPointField) {
-                $this->loadSplitPoint($dataField,$model);
+                $this->loadSplitPoint($dataField, $model);
                 continue;
             }
             
@@ -93,10 +93,13 @@ abstract class LaravelModelSerializer extends BaseSerializer
         return $this;
     }
 
-    public function loadSplitPoint($dataField,$model)
+    public function loadSplitPoint($dataField, $model)
     {
         $lat = $dataField->getLatitudeColumn();
         $lon = $dataField->getLongitudeColumn();
-        $dataField->setData(['latitude' => $model->$lat, 'longitude' => $model->$lon]);
+        $dataField->setData([
+            'latitude' => $model->$lat,
+            'longitude' => $model->$lon
+        ]);
     }
 }

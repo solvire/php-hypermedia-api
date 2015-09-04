@@ -8,20 +8,20 @@ use Carbon\Carbon;
  *
  * It would be nicer to us if you pass in an object so we don't have to guess.
  * BTW Carbon Rocks
- * 
+ *
  * @see http://carbon.nesbot.com/docs/
  *
  *
  * @author solvire <stevenjscott@gmail.com>
  * @package DataFields
- * @name sapce Solvire\API\Serializers\DataFields
+ * @namespace Solvire\API\Serializers\DataFields
  */
 class DateTimeField extends DataField
 {
 
     /**
      * default formatting of ISO8601
-     * 
+     *
      * @var string [Y-m-d\TH:i:sO]
      */
     protected $format = Carbon::ISO8601;
@@ -30,7 +30,9 @@ class DateTimeField extends DataField
 
     /**
      *
+     *
      * This can take any of the three formats listed.
+     * 
      * @param $data mixed
      *            [string, Carbon, DateTime]
      *            
@@ -49,7 +51,7 @@ class DateTimeField extends DataField
                 $date = Carbon::instance($data);
             }
         } catch (\Exception $e) {
-            throw new \RuntimeException('DateTimeField data must be a string representation of a date/time object in format: ' . $this->format, $e);
+            throw new \RuntimeException('DateTimeField data must be a string representation of a date/time object in format: ' . $this->format, 400, $e);
         }
         
         $this->data = $date;

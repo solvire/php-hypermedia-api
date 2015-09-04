@@ -1,7 +1,6 @@
 <?php
 namespace Solvire\API\Serializers\DataFields;
 
-
 use Solvire\API\Exceptions\InvalidParameterException;
 
 /**
@@ -12,18 +11,18 @@ use Solvire\API\Exceptions\InvalidParameterException;
  */
 class FloatField extends DataField
 {
-    
+
     protected $cast = 'float';
-    
+
     public function setData($data)
     {
-        if(!is_float($data))
+        if (! is_float($data))
             throw new InvalidParameterException('FloatField data must be a float/double');
         
         $this->data = $data;
         return $this;
     }
-    
+
     /**
      * This is a char so it will always be just a string
      */
@@ -31,5 +30,4 @@ class FloatField extends DataField
     {
         return (float) $this->data;
     }
-    
 }

@@ -1,32 +1,36 @@
 <?php
 namespace Solvire\API\Serializers\DataFields;
 
-
 use Solvire\API\Exceptions\InvalidParameterException;
 use Solvire\Utilities\OptionsChecker as Ch;
 
 /**
- * Kind of a hack to couple the data elements in separate fields as a single point for representation 
- * In GIS databases this would be one data element. 
- * 
+ * Kind of a hack to couple the data elements in separate fields as a single point for representation
+ * In GIS databases this would be one data element.
+ *
+ *
  * @author solvire <stevenjscott@gmail.com>
  * @package DataFields
  * @namespace Solvire\API\Serializers\DataFields
  */
 class SplitPointField extends PointField
 {
-    protected $requiredFields = ['latitudeColumn','longitudeColumn'];
-    
+
+    protected $requiredFields = [
+        'latitudeColumn',
+        'longitudeColumn'
+    ];
+
     protected $cast = 'array';
-    
+
     protected $latitudeColumn = 'latitude';
-    
+
     protected $longitudeColumn = 'longitude';
-    
+
     /**
      * among the other variables we need to have the column names for longitude and latitude added in here
-     * 
-     * @param array $options
+     *
+     * @param array $options            
      */
     public function __construct($options)
     {
@@ -34,16 +38,15 @@ class SplitPointField extends PointField
         $this->latitudeColumn = $options['latitudeColumn'];
         $this->longitudeColumn = $options['longitudeColumn'];
         parent::__construct($options);
-    }    
-    
+    }
+
     public function getLatitudeColumn()
     {
         return $this->latitudeColumn;
     }
-    
+
     public function getLongitudeColumn()
     {
         return $this->longitudeColumn;
     }
-    
 }

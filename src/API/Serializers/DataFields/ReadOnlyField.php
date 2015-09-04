@@ -1,22 +1,21 @@
 <?php
 namespace Solvire\API\Serializers\DataFields;
 
-
 /**
  *
  * @author solvire <stevenjscott@gmail.com>
  * @package DataFields
- * @group DataFields
+ *          @group DataFields
  * @namespace Solvire\API\Serializers\DataFields
  */
 class ReadOnlyField extends DataField
 {
-    
+
     public function setData($data)
     {
         throw new \RuntimeException('not implemented');
     }
-    
+
     /**
      * This is a char so it will always be just a string
      */
@@ -24,5 +23,4 @@ class ReadOnlyField extends DataField
     {
         throw new \RuntimeException('not implemented');
     }
-    
 }

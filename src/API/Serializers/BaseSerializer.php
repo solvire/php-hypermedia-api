@@ -9,7 +9,7 @@ use Solvire\API\Serializers\DataFields\DataFieldCollection;
  * @see README.md
  * @author solvire <stevenjscott@gmail.com>
  * @package Serializers
- * @name sapce Solvire\API\Serializers
+ * @namespace Solvire\API\Serializers
  */
 abstract class BaseSerializer implements \JsonSerializable
 {
@@ -100,8 +100,9 @@ abstract class BaseSerializer implements \JsonSerializable
     }
 
     /**
-     * not the same as fill data - it should prob be depricated 
-     * @param unknown $data
+     * not the same as fill data - it should prob be depricated
+     * 
+     * @param unknown $data            
      */
     abstract public function loadData($data);
 
@@ -133,7 +134,7 @@ abstract class BaseSerializer implements \JsonSerializable
 
     /**
      * (non-PHPdoc)
-     * 
+     *
      * @see JsonSerializable::jsonSerialize()
      */
     abstract public function jsonSerialize();

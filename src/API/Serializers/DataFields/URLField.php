@@ -12,22 +12,23 @@ use Respect\Validation\Validator as v;
  */
 class URLField extends DataField
 {
-    
+
     protected $cast = 'string';
-    
+
     /**
      * (non-PHPdoc)
+     * 
      * @see \Solvire\API\Serializers\DataFields\DataField::setData()
      */
     public function setData($data)
     {
-        if(!is_string($data) || !v::url()->validate($data) )
+        if (! is_string($data) || ! v::url()->validate($data))
             throw new \RuntimeException('URLField data must be a string representation of a URL ' . $data);
         
         $this->data = $data;
         return $this;
     }
-    
+
     /**
      * This is a char so it will always be just a string
      */
@@ -35,5 +36,4 @@ class URLField extends DataField
     {
         return (string) $this->data;
     }
-    
 }

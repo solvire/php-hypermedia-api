@@ -24,12 +24,12 @@ class PointField extends DataField
 
     /**
      * (non-PHPdoc)
-     * 
+     *
      * @see \Solvire\API\Serializers\DataFields\DataField::setData()
      */
     public function setData($data)
     {
-        if ( (! is_array($data) || ! isset($data['latitude']) || ! isset($data['longitude'])) && ! $this->allowNull())
+        if ((! is_array($data) || ! isset($data['latitude']) || ! isset($data['longitude'])) && ! $this->allowNull())
             throw new InvalidParameterException('PointField data must be an array of fields with keys of latitude and longitude');
             
             // keeping it clean

@@ -85,13 +85,12 @@ abstract class DataField
     }
 
     /**
-     * 
-     * @param array $options
+     *
+     * @param array $options            
      */
     protected function loadOptions($options)
     {
-        foreach($this->fillable as $key)
-        {
+        foreach ($this->fillable as $key) {
             if (isset($options[$key]))
                 $this->$key = $options[$key];
         }

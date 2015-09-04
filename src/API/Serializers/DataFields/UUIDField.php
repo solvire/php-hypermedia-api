@@ -17,7 +17,7 @@ class UUIDField extends DataField
     {
         throw new \RuntimeException('not implemented');
     }
-    
+
     /**
      * This is a char so it will always be just a string
      */

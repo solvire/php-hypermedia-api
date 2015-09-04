@@ -9,18 +9,18 @@ namespace Solvire\API\Serializers\DataFields;
  */
 class IntegerField extends DataField
 {
-    
+
     protected $cast = 'integer';
-    
+
     public function setData($data)
     {
-        if(!is_int($data))
+        if (! is_int($data))
             throw new \RuntimeException('IntegerField data must be an integer ');
         
         $this->data = $data;
         return $this;
     }
-    
+
     /**
      * This is a int so it will always be just a integer
      */
@@ -28,5 +28,4 @@ class IntegerField extends DataField
     {
         return (int) $this->data;
     }
-    
 }
