@@ -13,7 +13,7 @@ class InvalidParameterException extends APIException
     
     /**
      * 
-     * @param unknown $message
+     * @param string $message
      * @param string $previous
      * @param array $errors
      */

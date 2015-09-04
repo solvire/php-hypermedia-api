@@ -4,9 +4,9 @@ namespace Solvire\API\Exceptions;
 /**
  * APIException
  * Base class for the API exceptions
- * 
- * TODO need to combined this with the API excpeption - duplicate 
- * 
+ *
+ * TODO need to combined this with the API excpeption - duplicate
+ *
  *
  * @author solvire <stevenjscott@gmail.com>
  * @package API
@@ -23,13 +23,13 @@ abstract class APIException extends \RuntimeException
 
     /**
      *
-     * @param string $message
-     * @param integer $statusCode
-     * @param \Exception $previous
-     * @param array $errors
-     * @param array $headers
+     * @param string $message            
+     * @param integer $statusCode            
+     * @param \Exception $previous            
+     * @param array $errors            
+     * @param array $headers            
      */
-    public function __construct($message, $statusCode = 0, \Exception $previous = null, array $errors = [], array $headers = [])
+    public function __construct($message, $statusCode = 0,\Exception $previous = null, array $errors = [], array $headers = [])
     {
         $this->statusCode = $statusCode;
         $this->headers = $headers;
@@ -52,24 +52,22 @@ abstract class APIException extends \RuntimeException
     {
         return $this->errors;
     }
-    
-    
+
     public function setStatusCode($val)
     {
         $this->statusCode = $val;
         return $this;
     }
-    
+
     public function setHeaders($val)
     {
         $this->headers = $val;
         return $this;
     }
-    
+
     public function setErrors($val)
     {
         $this->errors = $val;
         return $this;
     }
-    
 }
