@@ -1,11 +1,11 @@
 <?php
-namespace LeadFerret\Lib\API\Representatives;
+namespace Solvire\API\Representatives;
 
 /**
  * 
  * @author solvire <stevenjscott@gmail.com>
  * @package RepresentationControllers
- * @namespace LeadFerret\Lib\API\Representatives
+ * @namespace Solvire\API\Representatives
  */
 abstract class BaseRepresentationController 
 {
@@ -30,7 +30,7 @@ abstract class BaseRepresentationController
     /**
      * 
      * @param unknown $serializer
-     * @return \LeadFerret\Lib\API\Representatives\RepresentationControllers
+     * @return \Solvire\API\Representatives\RepresentationControllers
      */
     public function setSerializer($serializer)
     {
@@ -49,7 +49,7 @@ abstract class BaseRepresentationController
     /**
      *
      * @param unknown $renderer
-     * @return \LeadFerret\Lib\API\Representatives\RepresentationControllers
+     * @return \Solvire\API\Representatives\RepresentationControllers
      */
     public function setRenderer($renderer)
     {
@@ -69,7 +69,7 @@ abstract class BaseRepresentationController
     /**
      *
      * @param HttpRequest $request
-     * @return \LeadFerret\Lib\API\Representatives\RepresentationControllers
+     * @return \Solvire\API\Representatives\RepresentationControllers
      */
     public function setRequest($request)
     {

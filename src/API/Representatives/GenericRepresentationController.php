@@ -1,12 +1,12 @@
 <?php
-namespace LeadFerret\Lib\API\Representatives;
+namespace Solvire\API\Representatives;
 
 /**
  * Providing some basic CRUD level stuff
  *
  * @author solvire <stevenjscott@gmail.com>
  * @package RepresentationControllers
- * @namespace namespace LeadFerret\Lib\API\Representatives;
+ * @namespace namespace Solvire\API\Representatives;
  */
 class GenericRepresentationController extends BaseRepresentationController
 {

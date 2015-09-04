@@ -1,5 +1,5 @@
 <?php
-namespace LeadFerret\Lib\API\Representatives;
+namespace Solvire\API\Representatives;
 
 use Illuminate\Database\Eloquent\Model;
 /**
@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
  * 
  * @author solvire <stevenjscott@gmail.com>
  * @package RepresentationControllers
- * @namespace LeadFerret\Lib\API\Representatives
+ * @namespace Solvire\API\Representatives
  */
 class LaravelRepresentationController extends GenericRepresentationController
 {
