@@ -8,15 +8,16 @@ use Solvire\Application as Ev;
  *
  * @author solvire <stevenjscott@gmail.com>
  * @package JSONSchema
- * @name sapce Solvire\API\JSONSchema
+ * @namespace Solvire\API\JSONSchema
  */
 class JSONSchemaAppliance implements Schemable
 {
 
     protected $base = null;
-    
+
     /**
-     * @var ResourceCollection 
+     *
+     * @var ResourceCollection
      */
     protected $resources = null;
 
@@ -25,20 +26,19 @@ class JSONSchemaAppliance implements Schemable
         $this->constructBase();
         $this->resources = new ResourceCollection();
     }
-    
+
     /**
-     * 
-     * @param \Solvire\API\JSONSchema\Resource $resource
+     *
+     * @param \Solvire\API\JSONSchema\Resource $resource            
      * @return \Solvire\API\JSONSchema\JSONSchemaAppliance
      */
     public function registerResource(Resource $resource)
     {
-        if($this->resources == null)
+        if ($this->resources == null)
             $this->resources = new ResourceCollection();
         
         $this->resources->add($resource);
         return $this;
-        
     }
 
     /**
@@ -57,33 +57,31 @@ class JSONSchemaAppliance implements Schemable
         $this->base->setId(isset($options['id']) ? $options['id'] : Ev::get('APPLICATION_NAME') . ":" . Ev::get('API_VERSION'));
         $this->base->setVersion(isset($options['version']) ? $options['version'] : Ev::get('API_VERSION'));
         $this->base->setDescription(isset($options['description']) ? $options['description'] : Ev::get('API_DESCRIPTION'));
-        
     }
-    
+
     public function setAuthScopes($auths)
     {
-        // these should be Auth collection 
-        foreach($auths as $auth)
-        {
-            if(!($auth instanceOf Auth))
+        // these should be Auth collection
+        foreach ($auths as $auth) {
+            if (! ($auth instanceof Auth))
                 throw new \Exception("bad auth object");
         }
     }
-    
+
     /**
      * (non-PHPdoc)
+     * 
      * @see \Solvire\API\JSONSchema\Schemable::allSet()
      */
     public function allSet()
     {
-       if($this->base->allSet())
-           return true; 
+        if ($this->base->allSet())
+            return true;
     }
-    
+
     public function toSchema()
     {
-        if($this->allSet())
-        {
+        if ($this->allSet()) {
             return $this->base->toSchema();
         }
     }
