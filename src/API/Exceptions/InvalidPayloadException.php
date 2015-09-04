@@ -1,11 +1,11 @@
 <?php
-namespace LeadFerret\Lib\API\Exceptions;
+namespace Solvire\API\Exceptions;
 
 /**
  *
  * @author solvire <stevenjscott@gmail.com>
  * @package API
- * @name sapce LeadFerret\Lib\API\Exceptions
+ * @name sapce Solvire\API\Exceptions
  * 
  * http://tools.ietf.org/html/rfc4918#section-11.2
  */

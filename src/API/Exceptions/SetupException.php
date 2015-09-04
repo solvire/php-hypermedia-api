@@ -1,9 +1,9 @@
 <?php
-namespace LeadFerret\Lib\API;
+namespace Solvire\API;
 
 /**
  * @author solvire <stevenjscott@gmail.com>
  * @package API
- * @namespace LeadFerret\Lib\API
+ * @namespace Solvire\API
  */
 class SetupException extends \RuntimeException {}

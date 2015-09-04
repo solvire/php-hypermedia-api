@@ -2,13 +2,14 @@
 namespace Solvire\API\Exceptions;
 
 /**
- * Throws a 400
+ * Throws a 402 Payment Required
+ * 
  * 
  * @author solvire <stevenjscott@gmail.com>
  * @package API
  * @name sapce Solvire\API\Exceptions
  */
-class InvalidParameterException extends APIException
+class InsufficientPointsException extends APIException
 {
     
     /**
@@ -19,7 +20,7 @@ class InvalidParameterException extends APIException
      */
     public function __construct($message, $previous = null, array $errors = [])
     {
-        parent::__construct($message, 400, $previous, $errors);
+        parent::__construct($message, 402, $previous, $errors);
     }
     
 }

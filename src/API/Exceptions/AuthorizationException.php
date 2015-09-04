@@ -1,5 +1,5 @@
 <?php
-namespace LeadFerret\Lib\API\Exceptions;
+namespace Solvire\API\Exceptions;
 
 /**
  * Throws a 403
@@ -7,7 +7,7 @@ namespace LeadFerret\Lib\API\Exceptions;
  * 
  * @author solvire <stevenjscott@gmail.com>
  * @package API
- * @name sapce LeadFerret\Lib\API\Exceptions
+ * @name sapce Solvire\API\Exceptions
  */
 class AuthorizationException extends APIException
 {

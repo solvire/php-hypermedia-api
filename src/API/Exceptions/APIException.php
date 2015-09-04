@@ -1,5 +1,5 @@
 <?php
-namespace LeadFerret\Lib\API\Exceptions;
+namespace Solvire\API\Exceptions;
 
 /**
  * APIException
@@ -10,7 +10,7 @@ namespace LeadFerret\Lib\API\Exceptions;
  *
  * @author solvire <stevenjscott@gmail.com>
  * @package API
- * @name sapce LeadFerret\Lib\API\Exceptions
+ * @name sapce Solvire\API\Exceptions
  */
 abstract class APIException extends \RuntimeException
 {

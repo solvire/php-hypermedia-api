@@ -2,13 +2,13 @@
 namespace Solvire\API\Exceptions;
 
 /**
- * Throws a 400
+ * Throws a 401
  * 
  * @author solvire <stevenjscott@gmail.com>
  * @package API
  * @name sapce Solvire\API\Exceptions
  */
-class InvalidParameterException extends APIException
+class InvalidCredentialsException extends APIException
 {
     
     /**
@@ -19,7 +19,7 @@ class InvalidParameterException extends APIException
      */
     public function __construct($message, $previous = null, array $errors = [])
     {
-        parent::__construct($message, 400, $previous, $errors);
+        parent::__construct($message, 401, $previous, $errors);
     }
     
 }

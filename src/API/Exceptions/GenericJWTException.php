@@ -2,13 +2,13 @@
 namespace Solvire\API\Exceptions;
 
 /**
- * Throws a 400
+ * Throws a 401
  * 
  * @author solvire <stevenjscott@gmail.com>
  * @package API
  * @name sapce Solvire\API\Exceptions
  */
-class InvalidParameterException extends APIException
+class GenericJWTException extends APIException
 {
     
     /**
