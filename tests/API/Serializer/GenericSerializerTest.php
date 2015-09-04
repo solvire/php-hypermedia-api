@@ -1,5 +1,5 @@
 <?php
-namespace LeadFerret\Lib\API\Serializers;
+namespace Solvire\API\Serializers;
 
 /**
  * For testing the items in the base or otherwise that haven't been covered 
@@ -7,7 +7,7 @@ namespace LeadFerret\Lib\API\Serializers;
  * @author solvire <stevenjscott@gmail.com>
  * @package Serializers
  * @group Serializers
- * @namespace LeadFerret\Lib\API\Serializers
+ * @namespace Solvire\API\Serializers
  */
 class GenericSerializerTest extends \GenericTestCase
 {

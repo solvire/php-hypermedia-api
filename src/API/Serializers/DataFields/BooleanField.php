@@ -1,13 +1,13 @@
 <?php
-namespace LeadFerret\Lib\API\Serializers\DataFields;
+namespace Solvire\API\Serializers\DataFields;
 
-use LeadFerret\Lib\API\Exceptions\InvalidParameterException;
+use Solvire\API\Exceptions\InvalidParameterException;
 
 /**
  * 
  * @author solvire <stevenjscott@gmail.com>
  * @package DataFields
- * @namespace LeadFerret\Lib\API\Serializers\DataFields
+ * @namespace Solvire\API\Serializers\DataFields
  */
 class BooleanField extends DataField
 {
@@ -17,7 +17,7 @@ class BooleanField extends DataField
     /**
      * TODO need to set the truthiness of this thing - true == TRUE == True == 1
      * (non-PHPdoc)
-     * @see \LeadFerret\Lib\API\Serializers\DataFields\DataField::setData()
+     * @see \Solvire\API\Serializers\DataFields\DataField::setData()
      */
     public function setData($data)
     {

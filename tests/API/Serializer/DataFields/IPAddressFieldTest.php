@@ -1,5 +1,5 @@
 <?php
-namespace LeadFerret\Lib\API\Serializers\DataFields;
+namespace Solvire\API\Serializers\DataFields;
 
 
 /**
@@ -10,7 +10,7 @@ namespace LeadFerret\Lib\API\Serializers\DataFields;
  * @author solvire <stevenjscott@gmail.com>
  * @package DataFields
  * @group DataFields 
- * @namespace LeadFerret\Lib\API\Serializers\DataFields
+ * @namespace Solvire\API\Serializers\DataFields
  */
 class IPAddressFieldTest extends \GenericTestCase
 {

@@ -1,5 +1,5 @@
 <?php
-namespace LeadFerret\Lib\API\Serializers;
+namespace Solvire\API\Serializers;
 
 use LF\Utility\OptionsChecker as Ch;
 
@@ -9,7 +9,7 @@ use LF\Utility\OptionsChecker as Ch;
  * 
  * @author solvire <stevenjscott@gmail.com>
  * @package Serializers
- * @namespace LeadFerret\Lib\API\Serializers
+ * @namespace Solvire\API\Serializers
  */
 abstract class ArraySerializer extends BaseSerializer
 {
@@ -18,7 +18,7 @@ abstract class ArraySerializer extends BaseSerializer
 
     /**
      * (non-PHPdoc)
-     * @see \LeadFerret\Lib\API\Serializers\BaseSerializer::jsonSerialize()
+     * @see \Solvire\API\Serializers\BaseSerializer::jsonSerialize()
      */
     public function jsonSerialize()
     {

@@ -1,14 +1,14 @@
 <?php
-namespace LeadFerret\Lib\API\Serializers\DataFields;
+namespace Solvire\API\Serializers\DataFields;
 
 
-use LeadFerret\Lib\API\Exceptions\InvalidParameterException;
+use Solvire\API\Exceptions\InvalidParameterException;
 
 /**
  * 
  * @author solvire <stevenjscott@gmail.com>
  * @package DataFields
- * @namespace LeadFerret\Lib\API\Serializers\DataFields
+ * @namespace Solvire\API\Serializers\DataFields
  */
 class CharField extends DataField
 {

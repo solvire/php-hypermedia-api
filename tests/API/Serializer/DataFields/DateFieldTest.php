@@ -1,5 +1,5 @@
 <?php
-namespace LeadFerret\Lib\API\Serializers\DataFields;
+namespace Solvire\API\Serializers\DataFields;
 
 
 use Carbon\Carbon;
@@ -8,7 +8,7 @@ use Carbon\Carbon;
  * @author solvire <stevenjscott@gmail.com>
  * @group DataFields
  * @package DataFields
- * @namespace LeadFerret\Lib\API\Serializers\DataFields
+ * @namespace Solvire\API\Serializers\DataFields
  */
 class DateFieldTest extends \GenericTestCase
 {

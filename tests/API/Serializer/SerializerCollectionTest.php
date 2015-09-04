@@ -1,8 +1,8 @@
 <?php
-namespace LeadFerret\Lib\API\Serializers;
+namespace Solvire\API\Serializers;
 
 
-use LeadFerret\Lib\API\Serializers\BaseSerializer;
+use Solvire\API\Serializers\BaseSerializer;
 use PhpCollection\Sequence;
 
 class SerializerCollection extends Sequence

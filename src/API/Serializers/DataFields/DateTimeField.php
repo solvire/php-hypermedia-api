@@ -1,5 +1,5 @@
 <?php
-namespace LeadFerret\Lib\API\Serializers\DataFields;
+namespace Solvire\API\Serializers\DataFields;
 
 use Carbon\Carbon;
 
@@ -14,7 +14,7 @@ use Carbon\Carbon;
  *
  * @author solvire <stevenjscott@gmail.com>
  * @package DataFields
- * @name sapce LeadFerret\Lib\API\Serializers\DataFields
+ * @name sapce Solvire\API\Serializers\DataFields
  */
 class DateTimeField extends DataField
 {
@@ -36,7 +36,7 @@ class DateTimeField extends DataField
      *            
      * @return $this (non-PHPdoc)
      * @throws RuntimeException
-     * @see \LeadFerret\Lib\API\Serializers\DataFields\DataField::setData()
+     * @see \Solvire\API\Serializers\DataFields\DataField::setData()
      */
     public function setData($data)
     {

@@ -1,10 +1,10 @@
 <?php
-namespace LeadFerret\Lib\API\Serializers;
+namespace Solvire\API\Serializers;
 
-use LeadFerret\Lib\API\Serializers\DataFields\CharField;
-use LeadFerret\Lib\API\Serializers\DataFields\BooleanField;
-use LeadFerret\Lib\API\Serializers\DataFields\IPAddressField;
-use LeadFerret\Lib\API\Serializers\DataFields\DateTimeField;
+use Solvire\API\Serializers\DataFields\CharField;
+use Solvire\API\Serializers\DataFields\BooleanField;
+use Solvire\API\Serializers\DataFields\IPAddressField;
+use Solvire\API\Serializers\DataFields\DateTimeField;
 
 /**
  * making the class conrete for testing. 
@@ -12,7 +12,7 @@ use LeadFerret\Lib\API\Serializers\DataFields\DateTimeField;
  * @author solvire <stevenjscott@gmail.com>
  * @package Serializers
  * @group Serializers
- * @namespace LeadFerret\Lib\API\Serializers
+ * @namespace Solvire\API\Serializers
  */
 class ArraySerializerConcrete extends ArraySerializer
 {

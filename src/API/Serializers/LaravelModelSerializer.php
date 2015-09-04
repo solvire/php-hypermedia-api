@@ -1,15 +1,15 @@
 <?php
-namespace LeadFerret\Lib\API\Serializers;
+namespace Solvire\API\Serializers;
 
 use Illuminate\Database\Eloquent\Model;
-use LeadFerret\Lib\API\Serializers\DataFields\SplitPointField;
+use Solvire\API\Serializers\DataFields\SplitPointField;
 
 /**
  * Map a Laravel 5.x model to a serializer
  *
  * @author solvire <stevenjscott@gmail.com>
  * @package Serializers
- * @namespace LeadFerret\Lib\API\Serializers
+ * @namespace Solvire\API\Serializers
  */
 abstract class LaravelModelSerializer extends BaseSerializer
 {
@@ -23,7 +23,7 @@ abstract class LaravelModelSerializer extends BaseSerializer
     /**
      *
      * @param Model $model            
-     * @return \LeadFerret\Lib\API\Serializers\LaravelModelSerializer
+     * @return \Solvire\API\Serializers\LaravelModelSerializer
      */
     public function setModel(Model $model)
     {

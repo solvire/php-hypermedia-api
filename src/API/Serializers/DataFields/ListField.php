@@ -1,11 +1,11 @@
 <?php
-namespace LeadFerret\Lib\API\Serializers\DataFields;
+namespace Solvire\API\Serializers\DataFields;
 
 /**
  *
  * @author solvire <stevenjscott@gmail.com>
  * @package DataFields
- * @namespace LeadFerret\Lib\API\Serializers\DataFields
+ * @namespace Solvire\API\Serializers\DataFields
  */
 class ListField extends \GenericTestCase
 {
@@ -36,7 +36,7 @@ class ListField extends \GenericTestCase
     /**
      *
      * @param string $delimiter            
-     * @return \LeadFerret\Lib\API\Serializers\DataFields\ListField
+     * @return \Solvire\API\Serializers\DataFields\ListField
      */
     public function setDelimiter($delimiter)
     {

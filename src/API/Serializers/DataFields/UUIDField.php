@@ -1,5 +1,5 @@
 <?php
-namespace LeadFerret\Lib\API\Serializers\DataFields;
+namespace Solvire\API\Serializers\DataFields;
 
 /**
  * not sure how to use this yet.
@@ -8,7 +8,7 @@ namespace LeadFerret\Lib\API\Serializers\DataFields;
  *
  * @author solvire <stevenjscott@gmail.com>
  * @package DataFields
- * @namespace LeadFerret\Lib\API\Serializers\DataFields
+ * @namespace Solvire\API\Serializers\DataFields
  */
 class UUIDField extends DataField
 {

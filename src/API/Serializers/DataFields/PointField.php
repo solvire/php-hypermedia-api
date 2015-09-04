@@ -1,7 +1,7 @@
 <?php
-namespace LeadFerret\Lib\API\Serializers\DataFields;
+namespace Solvire\API\Serializers\DataFields;
 
-use LeadFerret\Lib\API\Exceptions\InvalidParameterException;
+use Solvire\API\Exceptions\InvalidParameterException;
 
 /**
  * Kind of a hack to couple the data elements in separate fields as a single point for representation
@@ -10,7 +10,7 @@ use LeadFerret\Lib\API\Exceptions\InvalidParameterException;
  *
  * @author solvire <stevenjscott@gmail.com>
  * @package DataFields
- * @namespace LeadFerret\Lib\API\Serializers\DataFields
+ * @namespace Solvire\API\Serializers\DataFields
  */
 class PointField extends DataField
 {
@@ -25,7 +25,7 @@ class PointField extends DataField
     /**
      * (non-PHPdoc)
      * 
-     * @see \LeadFerret\Lib\API\Serializers\DataFields\DataField::setData()
+     * @see \Solvire\API\Serializers\DataFields\DataField::setData()
      */
     public function setData($data)
     {

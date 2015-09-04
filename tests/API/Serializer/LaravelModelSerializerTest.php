@@ -1,5 +1,5 @@
 <?php
-namespace LeadFerret\Lib\API\Serializers;
+namespace Solvire\API\Serializers;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -12,7 +12,7 @@ require_once(realpath(__DIR__ . '/LaravelModelSerializerConcrete.php'));
  *
  * @author solvire <stevenjscott@gmail.com>
  * @package Serializers
- * @namespace LeadFerret\Lib\API\Serializers
+ * @namespace Solvire\API\Serializers
  */
 class LaravelModelSerializerTest extends \GenericTestCase
 {
@@ -42,7 +42,7 @@ class LaravelModelSerializerTest extends \GenericTestCase
         $this->assertTrue(is_string($json));
         
         $ef = $ser->getField('email');
-        $this->assertInstanceOf('LeadFerret\Lib\API\Serializers\DataFields\EmailField', $ef);
+        $this->assertInstanceOf('Solvire\API\Serializers\DataFields\EmailField', $ef);
 
     }
     

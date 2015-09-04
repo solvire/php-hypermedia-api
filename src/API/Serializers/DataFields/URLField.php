@@ -1,5 +1,5 @@
 <?php
-namespace LeadFerret\Lib\API\Serializers\DataFields;
+namespace Solvire\API\Serializers\DataFields;
 
 use Respect\Validation\Validator as v;
 
@@ -8,7 +8,7 @@ use Respect\Validation\Validator as v;
  *
  * @author solvire <stevenjscott@gmail.com>
  * @package DataFields
- * @namespace LeadFerret\Lib\API\Serializers\DataFields
+ * @namespace Solvire\API\Serializers\DataFields
  */
 class URLField extends DataField
 {
@@ -17,7 +17,7 @@ class URLField extends DataField
     
     /**
      * (non-PHPdoc)
-     * @see \LeadFerret\Lib\API\Serializers\DataFields\DataField::setData()
+     * @see \Solvire\API\Serializers\DataFields\DataField::setData()
      */
     public function setData($data)
     {

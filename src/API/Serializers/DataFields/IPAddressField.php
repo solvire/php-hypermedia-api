@@ -1,8 +1,8 @@
 <?php
-namespace LeadFerret\Lib\API\Serializers\DataFields;
+namespace Solvire\API\Serializers\DataFields;
 
 
-use LeadFerret\Lib\API\Exceptions\InvalidParameterException;
+use Solvire\API\Exceptions\InvalidParameterException;
 
 /**
  * IP Address is stored as a binary structure. 
@@ -11,7 +11,7 @@ use LeadFerret\Lib\API\Exceptions\InvalidParameterException;
  * @see http://php.net/manual/en/function.inet-ntop.php
  * @author solvire <stevenjscott@gmail.com>
  * @package DataFields
- * @namespace LeadFerret\Lib\API\Serializers\DataFields
+ * @namespace Solvire\API\Serializers\DataFields
  */
 class IPAddressField extends DataField
 {

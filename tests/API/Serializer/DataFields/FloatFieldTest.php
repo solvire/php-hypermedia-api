@@ -1,5 +1,5 @@
 <?php
-namespace LeadFerret\Lib\API\Serializers\DataFields;
+namespace Solvire\API\Serializers\DataFields;
 
 /**
  * same as double - just semantics here 
@@ -7,7 +7,7 @@ namespace LeadFerret\Lib\API\Serializers\DataFields;
  * @author solvire <stevenjscott@gmail.com>
  * @group DataFields
  * @package DataFields
- * @namespace LeadFerret\Lib\API\Serializers\DataFields
+ * @namespace Solvire\API\Serializers\DataFields
  */
 class FloatFieldTest extends \GenericTestCase
 {

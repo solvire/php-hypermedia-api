@@ -1,6 +1,6 @@
 <?php
 
-namespace LeadFerret\Lib\API\Serializers;
+namespace Solvire\API\Serializers;
 
 use Illuminate\Database\Eloquent\Model;
 

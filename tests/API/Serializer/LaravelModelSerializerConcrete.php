@@ -1,19 +1,19 @@
 <?php
-namespace LeadFerret\Lib\API\Serializers;
+namespace Solvire\API\Serializers;
 
 
-use LeadFerret\Lib\API\Serializers\DataFields\CharField;
-use LeadFerret\Lib\API\Serializers\DataFields\EmailField;
-use LeadFerret\Lib\API\Serializers\DataFields\IntegerField;
-use LeadFerret\Lib\API\Serializers\LaravelModelSerializer;
-use LeadFerret\Lib\API\Serializers\DataFields\SplitPointField;
+use Solvire\API\Serializers\DataFields\CharField;
+use Solvire\API\Serializers\DataFields\EmailField;
+use Solvire\API\Serializers\DataFields\IntegerField;
+use Solvire\API\Serializers\LaravelModelSerializer;
+use Solvire\API\Serializers\DataFields\SplitPointField;
 
 
 /**
  * 
  * @author solvire <stevenjscott@gmail.com>
  * @package Serializers
- * @namespace LeadFerret\Http\Controllers\API\Serializers
+ * @namespace Solvire\Http\Controllers\API\Serializers
  */
 class LaravelModelSerializerConcrete extends LaravelModelSerializer
 {
@@ -21,7 +21,7 @@ class LaravelModelSerializerConcrete extends LaravelModelSerializer
     
     /**
      * (non-PHPdoc)
-     * @see \LeadFerret\Lib\API\Serializers\BaseSerializer::initDataFields()
+     * @see \Solvire\API\Serializers\BaseSerializer::initDataFields()
      */
     public function initDataFields()
     {

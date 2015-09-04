@@ -1,15 +1,15 @@
 <?php
-namespace LeadFerret\Lib\API\Serializers;
+namespace Solvire\API\Serializers;
 
-use LeadFerret\Lib\API\Serializers\DataFields\DataField;
-use LeadFerret\Lib\API\Serializers\DataFields\DataFieldCollection;
+use Solvire\API\Serializers\DataFields\DataField;
+use Solvire\API\Serializers\DataFields\DataFieldCollection;
 
 /**
  *
  * @see README.md
  * @author solvire <stevenjscott@gmail.com>
  * @package Serializers
- * @name sapce LeadFerret\Lib\API\Serializers
+ * @name sapce Solvire\API\Serializers
  */
 abstract class BaseSerializer implements \JsonSerializable
 {

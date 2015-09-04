@@ -1,12 +1,12 @@
 <?php
-namespace LeadFerret\Lib\API\Serializers\DataFields;
+namespace Solvire\API\Serializers\DataFields;
 
 /**
  *
  * @author solvire <stevenjscott@gmail.com>
  * @package DataFields
  * @group DataFields
- * @namespace LeadFerret\Lib\API\Serializers\DataFields
+ * @namespace Solvire\API\Serializers\DataFields
  */
 class CharFieldTest extends \GenericTestCase
 {
@@ -16,7 +16,7 @@ class CharFieldTest extends \GenericTestCase
         $options = $this->getOptions();
         
         $char = new CharField($options);
-        $this->assertInstanceOf('LeadFerret\Lib\API\Serializers\DataFields\CharField', $char);
+        $this->assertInstanceOf('Solvire\API\Serializers\DataFields\CharField', $char);
         
         $this->assertEquals($char->columnName(), $options['columnName']);
         $this->assertEquals($char->allowNull(), $options['allowNull']);

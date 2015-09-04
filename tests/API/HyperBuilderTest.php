@@ -10,7 +10,7 @@ use LeadFerret\Models\Contact;
  * @package API
  * @namespace LeadFerret\Lib\API
  */
-class HyperBuilderTest extends  \UserTestCase
+class HyperBuilderTest extends  \BaseTestCase
 {
     
     
