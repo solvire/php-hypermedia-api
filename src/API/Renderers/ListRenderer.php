@@ -1,7 +1,7 @@
 <?php
-namespace LeadFerret\Lib\API\Renderers;
+namespace Solvire\API\Renderers;
 
-use LeadFerret\Lib\API\Serializers\BaseSerializer;
+use Solvire\API\Serializers\BaseSerializer;
 
 /**
  * Like the view.
@@ -10,7 +10,7 @@ use LeadFerret\Lib\API\Serializers\BaseSerializer;
  *
  * @author solvire <stevenjscott@gmail.com>
  * @package Renderers
- * @namespace LeadFerret\Lib\API\Renderers
+ * @namespace Solvire\API\Renderers
  */
 abstract class ListRenderer extends GenericRenderer implements Getable
 {

@@ -1,12 +1,12 @@
 <?php
-namespace LeadFerret\Lib\API\Renderers;
+namespace Solvire\API\Renderers;
 
 /**
  * Interface for the GET method 
  * 
  * @author solvire <stevenjscott@gmail.com>
  * @package Renderers
- * @namespace LeadFerret\Lib\API\Renderers
+ * @namespace Solvire\API\Renderers
  */
 interface Getable
 {

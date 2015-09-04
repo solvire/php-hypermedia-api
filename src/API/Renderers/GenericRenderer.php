@@ -1,5 +1,5 @@
 <?php
-namespace LeadFerret\Lib\API\Renderers;
+namespace Solvire\API\Renderers;
 
 /**
  * Like the view.
@@ -7,7 +7,7 @@ namespace LeadFerret\Lib\API\Renderers;
  *
  * @author solvire <stevenjscott@gmail.com>
  * @package Renderers
- * @namespace LeadFerret\Lib\API\Renderers
+ * @namespace Solvire\API\Renderers
  */
 class GenericRenderer extends BaseRenderer
 {

@@ -1,13 +1,13 @@
 <?php
-namespace LeadFerret\Lib\API\Renderers;
+namespace Solvire\API\Renderers;
 
-use LeadFerret\Lib\API\Serializers\BaseSerializer;
+use Solvire\API\Serializers\BaseSerializer;
 /**
  * Base of the Renderer classes 
  * 
  * @author solvire <stevenjscott@gmail.com>
  * @package Renderers
- * @namespace LeadFerret\Lib\API\Renderers
+ * @namespace Solvire\API\Renderers
  */
 abstract class BaseRenderer
 {
@@ -24,7 +24,7 @@ abstract class BaseRenderer
     /**
      * 
      * @param BaseSerializer $serializer
-     * @return \LeadFerret\Lib\API\Serializers\BaseSerializer
+     * @return \Solvire\API\Serializers\BaseSerializer
      */
     public function setSerializer(BaseSerializer $serializer)
     {
@@ -35,7 +35,7 @@ abstract class BaseRenderer
     /**
      *
      * @param HttpRequest $request
-     * @return \LeadFerret\Lib\API\Representatives\RepresentationControllers
+     * @return \Solvire\API\Representatives\RepresentationControllers
      */
     public function setRequest($request)
     {

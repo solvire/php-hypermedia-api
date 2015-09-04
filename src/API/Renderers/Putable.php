@@ -1,12 +1,12 @@
 <?php
-namespace LeadFerret\Lib\API\Renderers;
+namespace Solvire\API\Renderers;
 
 /**
  * Interface for the PUT method UPDATE
  * 
  * @author solvire <stevenjscott@gmail.com>
  * @package Renderers
- * @namespace LeadFerret\Lib\API\Renderers
+ * @namespace Solvire\API\Renderers
  */
 interface Putable 
 {
