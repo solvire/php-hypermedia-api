@@ -16,11 +16,10 @@ abstract class ListRenderer extends GenericRenderer implements Getable
 {
 
     protected $resultSet = null;
-    
+
     protected $resultArray = [];
-    
+
     protected $paginationLimit = null;
-    
 
     public function nextPageUrl()
     {
@@ -41,7 +40,7 @@ abstract class ListRenderer extends GenericRenderer implements Getable
     {
         return $this->resultSet->firstItem();
     }
-    
+
     public function lastPage()
     {
         return $this->resultSet->lastPage();
@@ -76,13 +75,13 @@ abstract class ListRenderer extends GenericRenderer implements Getable
     {
         return $this->resultSet->total();
     }
-    
+
     public function setPaginationLimit($paginationLimit)
     {
         $this->paginationLimit = $paginationLimit;
         return $this;
     }
-    
+
     public function getPaginationLimit()
     {
         return $this->paginationLimit;
@@ -109,7 +108,9 @@ abstract class ListRenderer extends GenericRenderer implements Getable
         
         $this->resultArray = $retarr;
         
-        return ['items' => $retarr];
+        return [
+            'items' => $retarr
+        ];
     }
 
     /**
