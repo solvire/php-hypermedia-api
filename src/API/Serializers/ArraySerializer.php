@@ -1,7 +1,7 @@
 <?php
 namespace Solvire\API\Serializers;
 
-use LF\Utility\OptionsChecker as Ch;
+use Solvire\Utilities\OptionsChecker as Ch;
 
 /**
  * Just map a static output 

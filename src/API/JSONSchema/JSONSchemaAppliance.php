@@ -1,7 +1,7 @@
 <?php
 namespace Solvire\API\JSONSchema;
 
-use LF\Utility\OptionsChecker as Ch;
+use Solvire\Utilities\OptionsChecker as Ch;
 use Solvire\Application as Ev;
 
 /**

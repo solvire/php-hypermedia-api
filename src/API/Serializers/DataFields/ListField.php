@@ -7,7 +7,7 @@ namespace Solvire\API\Serializers\DataFields;
  * @package DataFields
  * @namespace Solvire\API\Serializers\DataFields
  */
-class ListField extends \GenericTestCase
+class ListField extends DataField
 {
 
     protected $delimiter = ',';

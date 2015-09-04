@@ -4,3 +4,5 @@
 /.settings/
 
 /vendor/
+
+/composer.lock
