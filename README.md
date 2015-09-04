@@ -1,6 +1,9 @@
 # PHP Hypermedia API Wrapper for HATEOAS HTTP or REST Services
 ## Repo: php-hypermedia-api
 
+[![Build Status](https://travis-ci.org/solvire/php-hypermedia-api.svg?branch=master)](https://travis-ci.org/solvire/php-hypermedia-api)
+
+
 ## Hypermedia API 
 
 This work originally started trying to bring the LeadFerret front-end user API into compliance. 
