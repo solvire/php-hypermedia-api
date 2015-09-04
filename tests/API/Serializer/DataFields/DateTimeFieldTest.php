@@ -21,7 +21,7 @@ class DateTimeFieldTest extends \BaseTestCase
     protected $formatType = 'Iso8601';
 
     /**
-     * @expectedException InvalidArgumentException
+     * @expectedException \RuntimeException
      */
     public function testCanSetData()
     {
