@@ -1,0 +1,21 @@
+{
+    "href": "https://api.mycompany.com/v1/users?offset=50&amp;limit=50",
+    "offset": 50,
+    "limit": 50,
+    "first": {
+        "href": "https://api.mycompany.com/v1/users"
+    },
+    "prev": {
+        "href": "https://api.mycompany.com/v1/users"
+    },
+    "next": {
+        "href": "https://api.mycompany.com/v1/users?offset=100&amp;limit=50"
+    },
+    "last": {
+        "href": "https://api.mycompany.com/v1/users?offset=50&amp;limit=50"
+    },
+    "items": [
+        "a",
+        "b"
+    ]
+}
