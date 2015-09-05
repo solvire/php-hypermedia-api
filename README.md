@@ -46,9 +46,9 @@ When you land on a random webpage the authors care enough to provide you a way t
 
 The / root of the application should provide enough information that a machine may transverse the server on it's own. 
 
-This library intends to wrap an MVC style framework and provide utilities to produce hypermedia context more easily.  This context is meaning behind the returned data. 
+This library intends to wrap an agnostic framework and provide utilities to produce hypermedia context more easily.  This context is meaning behind the returned data. 
 
-For REST to be valid it needs to provide context in the form of hypermedia.  
+For REST to be valid it needs to provide context in the form of hypermedia.  Again see [Roy T. Fielding](http://roy.gbiv.com/untangled/2008/rest-apis-must-be-hypertext-driven) on the topic. 
 
 ### HATEOAS - Hypermedia as the Engine of Application State
 
