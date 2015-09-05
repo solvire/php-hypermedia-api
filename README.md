@@ -52,6 +52,8 @@ For REST to be valid it needs to provide context in the form of hypermedia.  Aga
 
 ### HATEOAS - Hypermedia as the Engine of Application State
 
+
+
 ----
 
 
@@ -69,7 +71,7 @@ Some of the features were loosely modeled on the [Django Rest Framework \(DRF\)]
 
 ### Class Structure
 
-<a href="https://github.com/solvire/php-hypermedia-api/docs/laravel_hypermedia.png" target="_blank"><img src="docs/laravel_hypermedia.png" 
+<a href="https://raw.githubusercontent.com/solvire/php-hypermedia-api/master/docs/laravel_hypermedia.png" target="_blank"><img src="docs/laravel_hypermedia.png" 
 alt="PHP Hypermedia API" width="800" /></a>
 
 
