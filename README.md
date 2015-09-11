@@ -69,6 +69,22 @@ In order for JSON Schema to work properly the types of responses are strongly de
 
 Some of the features were loosely modeled on the [Django Rest Framework \(DRF\)](http://www.django-rest-framework.org/). Primarily how they treat their views which we call *renderers*. 
 
+### Schemas
+
+When creating a web service the default schema return from the root level of the resources. This is part of a somewhat separate JSON-Schema controller.  It shows some of the application level items. 
+
+
+    {
+      "$schema": "http://json-schema.org/draft-04/schema#",
+      "basePath": "/public/api",
+      "baseUrl": "https://api.yourdomain.com",
+      "description": "API Cool End-User API",
+      "documentationUrl": "http://docs.domain.apiary.io/#",
+      "id": "appname:v1",
+      "name": "appname",
+      "version": "v1.0"
+    }
+
 ### Class Structure
 
 <a href="https://raw.githubusercontent.com/solvire/php-hypermedia-api/master/docs/laravel_hypermedia.png" target="_blank"><img src="docs/laravel_hypermedia.png" 

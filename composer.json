@@ -4,7 +4,7 @@
     "require": {
         "laravel/framework": "5.1.*",
         "nesbot/carbon": "^1.19",
-        "solvire/common-utilities": "v0.0.2",
+        "solvire/common-utilities": "dev-master",
         "phpcollection/phpcollection": "^0.4.0",
         "apache/log4php": "2.3.0",
         "respect/validation": "^0.9.3"
