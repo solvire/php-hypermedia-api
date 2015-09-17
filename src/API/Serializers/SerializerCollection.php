@@ -3,6 +3,7 @@ namespace Solvire\API\Serializers;
 
 use Solvire\API\Serializers\BaseSerializer;
 use PhpCollection\Sequence;
+use LeadFerret\Http\Controllers\API\Serializers\HealthSerializer;
 
 class SerializerCollection extends Sequence
 {
@@ -21,7 +22,7 @@ class SerializerCollection extends Sequence
     {
         foreach ($serializers as $key => $serializer) {
             if (! ($serializer instanceof BaseSerializer)) {
-                throw new Exceptions\InvalidParameterException("Only search paramater objects allowed here.");
+                throw new \RuntimeException("Only serializer objects allowed here.");
             }
         }
         parent::__construct($serializers);
