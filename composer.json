@@ -1,6 +1,7 @@
 {
     "name": "solvire/php-hypermedia-api",
     "description": "PHP Hypermedia Enabled API Wrapper for HTTP REST",
+    "keywords": ["REST","API","Hypermedia","Laravel","Serializer","Wrapper","HTTP","PHP"],
     "require": {
         "laravel/framework": "5.1.*",
         "nesbot/carbon": "^1.19",
