@@ -16,12 +16,6 @@ class Resource
 {
 
     /**
-     *
-     * @var string
-     */
-    protected $name = null;
-
-    /**
      * pulled in from the API
      * every resource needs to have a serializer attached to it
      *

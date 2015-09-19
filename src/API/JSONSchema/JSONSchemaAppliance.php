@@ -2,7 +2,7 @@
 namespace Solvire\API\JSONSchema;
 
 use Solvire\Utilities\OptionsChecker as Ch;
-use Solvire\Application as Ev;
+use Solvire\Application\Environment as Ev;
 
 /**
  *
