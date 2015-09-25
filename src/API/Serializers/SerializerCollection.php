@@ -5,6 +5,12 @@ use Solvire\API\Serializers\BaseSerializer;
 use PhpCollection\Sequence;
 use LeadFerret\Http\Controllers\API\Serializers\HealthSerializer;
 
+/**
+ * 
+ * @author solvire <stevenjscott@gmail.com>
+ * @package Serializers
+ * @namespace Solvire\API\Serializers
+ */
 class SerializerCollection extends Sequence
 {
 
