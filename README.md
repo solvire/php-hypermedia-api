@@ -214,6 +214,8 @@ For form fields and UI components it may be helpful to deploy information about 
 
 ### Serializer Example 
 
+Here is an example of a serializer for a company record. It extends the `LaravelModelSerializer` which can interface with Laravel models explicitly. At some point we will integrate with symfony but not at this time. 
+
 ```php
 use Solvire\API\Serializers\DataFields\CharField;
 use Solvire\API\Serializers\DataFields\BooleanField;
@@ -263,3 +265,36 @@ class CompanySerializer extends LaravelModelSerializer
     
 }
 ```
+
+
+Here we have an example of a health check serializer. Since this is just a heartbeat response we don't really need to interface with the database. It doesn't need data binding. For this case we just extended the `ArraySerializer`. Basically only output although we might be able to find some input use cases for it.
+
+
+```php
+
+/**
+ * 
+ * @author solvire <stevenjscott@gmail.com>
+ * @package Serializers
+ * @namespace LeadFerret\Http\Controllers\API\Serializers
+ */
+class HealthSerializer extends ArraySerializer
+{
+    
+    protected $requiredOptions = ['status','server_data','ip','you','stage','alive','timestamp'];
+    
+    public function initDataFields()
+    {
+        $this->addField('status', new CharField());
+        $this->addField('server_data', new CharField());
+        $this->addField('ip', new IPAddressField());
+        $this->addField('you', new CharField());
+        $this->addField('stage', new CharField());
+        $this->addField('alive', new BooleanField());
+        $this->addField('timestamp', new DateTimeField());
+    }
+    
+}
+
+```
+
