@@ -227,17 +227,12 @@ use Solvire\API\Serializers\DataFields\SplitPointField;
 
 /**
  * 
- * @author solvire <stevenjscott@gmail.com>
+ * @author solvire 
  * @package Serializers
- * @namespace LeadFerret\Http\Controllers\API\Serializers
+ * @namespace App\Http\Controllers\API\Serializers
  */
 class CompanySerializer extends LaravelModelSerializer
 {
-    /**
-     * 
-     * @var array $requiredOptions
-     */
-    protected $requiredOptions = ['name','address','city','state','zip','email'];
     
     public function initDataFields()
     {
