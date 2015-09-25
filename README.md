@@ -131,3 +131,82 @@ There is an object for each one of your favorite data types. Below is the list.
  * URLField 
  * UUIDField 
 
+### Data Field Condition Attributes 
+
+For each data field there are a set of attributes which will affect the functionality of your serializer.  Most of the attribute refer to transformations that might occur, while some are validators or filters. 
+
+#### Read Only 
+
+    readOnly
+
+A field that is marked as `'readOnly'=>true` may not be written to. The serializer should ignore this field in determining data writes.  
+
+Examples of this are date fields or account status fields. 
+
+Default: `false`
+
+#### Write Only 
+
+    writeOnly
+    
+A field marked as `'writeOnly'=>true` will not be displayed to the end user. They are written to and may have filters or validators applied to them. 
+
+Examples are passwords or point increment 
+
+Default: `false`
+
+#### Required Field
+
+    required
+
+If a field is marked with `'required'=>true` causes the system to throw an error if the field is not present during the update. Setting this to false is unnecessary since that is the default setting. 
+
+Default: `false`
+
+
+#### Allow Null Values
+
+    allowNull 
+
+If the field is marked with `'allowNull'=>true` the serializer will allow you to pass a null value with the field. The recording agent should also respect this request and set the data field to null as well. 
+
+Default: `false` 
+
+#### Allow Empty Strings
+
+    allowEmpty
+
+If the field is marked with `'allowEmpty'=>true` the serializer will allow you to pass an empty string ''. The recording agent should also respect this request and set the data field to blank as well. Note that null and empty strings are not the same. They should be treated differently.
+
+Default: `false` 
+
+#### Default Value
+
+    defaultValue
+    
+Many times you may want to set a default value so that if the data isn't in the db or passed in that it is set already. `'defaultValue'=>'something'` 
+
+Default: `null`
+
+#### Column Name - Alias 
+
+One of the biggest problems with an API response value is setting the keys and translating back and forth.  Setting a column name will help readability and usability. `'columnName'=>'mapped_column'`. For instance your users doesn't need to know the primary column is CompanyNameID. Just 'id' will be fine. 
+
+Examples: Primary keys, sensitive names, ugly names
+
+Default: null - uses your DB column name 
+
+#### Validators 
+
+This is not implemented yet, but you can assume that we will be allowing the ability to pass in chains of validators. We may standardize but that hasn't happened yet. Suggestions are welcome. 
+
+### Output Specific Attributes 
+
+#### Styling 
+
+This is not implemented yet but you may pass back output related styling. 
+
+#### Help Text 
+
+For form fields and UI components it may be helpful to deploy information about it for the human interface. Not implemented yet. 
+
