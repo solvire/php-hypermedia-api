@@ -298,3 +298,20 @@ class HealthSerializer extends ArraySerializer
 
 ```
 
+The server response will look like this: 
+
+```json
+{
+    "alive": true, 
+    "ip": "192.168.56.1", 
+    "server_data": "LF API", 
+    "stage": "development", 
+    "status": "OK", 
+    "timestamp": {
+        "date": "2015-09-25 22:23:51.000000", 
+        "timezone": "UTC", 
+        "timezone_type": 3
+    }, 
+    "you": "HTTPie/0.9.2"
+}
+```
