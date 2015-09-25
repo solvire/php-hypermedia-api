@@ -229,7 +229,7 @@ use Solvire\API\Serializers\DataFields\SplitPointField;
 
 /**
  * 
- * @author solvire 
+ * @author solvire <stevenjscott@gmail.com>
  * @package Serializers
  * @namespace App\Http\Controllers\API\Serializers
  */
@@ -271,6 +271,11 @@ Here we have an example of a health check serializer. Since this is just a heart
 
 
 ```php
+use Solvire\API\Serializers\ArraySerializer;
+use Solvire\API\Serializers\DataFields\CharField;
+use Solvire\API\Serializers\DataFields\BooleanField;
+use Solvire\API\Serializers\DataFields\IPAddressField;
+use Solvire\API\Serializers\DataFields\DateTimeField;
 
 /**
  * 
@@ -280,8 +285,6 @@ Here we have an example of a health check serializer. Since this is just a heart
  */
 class HealthSerializer extends ArraySerializer
 {
-    
-    protected $requiredOptions = ['status','server_data','ip','you','stage','alive','timestamp'];
     
     public function initDataFields()
     {
@@ -298,7 +301,8 @@ class HealthSerializer extends ArraySerializer
 
 ```
 
-The server response will look like this: 
+The server response will look like this. It should format the fields into their proper data types. More flexibility will be added for the various fields in the future. Things such as setting timezones and adding translations. 
+
 
 ```json
 {
