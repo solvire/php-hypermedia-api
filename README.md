@@ -210,3 +210,61 @@ This is not implemented yet but you may pass back output related styling.
 
 For form fields and UI components it may be helpful to deploy information about it for the human interface. Not implemented yet. 
 
+
+
+### Serializer Example 
+
+```php
+use Solvire\API\Serializers\DataFields\CharField;
+use Solvire\API\Serializers\DataFields\BooleanField;
+use Solvire\API\Serializers\DataFields\IPAddressField;
+use Solvire\API\Serializers\DataFields\DateTimeField;
+use Solvire\API\Serializers\DataFields\EmailField;
+use Solvire\API\Serializers\DataFields\IntegerField;
+use Solvire\API\Serializers\LaravelModelSerializer;
+use Solvire\API\Serializers\DataFields\SplitPointField;
+
+
+/**
+ * 
+ * @author solvire <stevenjscott@gmail.com>
+ * @package Serializers
+ * @namespace LeadFerret\Http\Controllers\API\Serializers
+ */
+class CompanySerializer extends LaravelModelSerializer
+{
+    /**
+     * 
+     * @var array $requiredOptions
+     */
+    protected $requiredOptions = ['name','address','city','state','zip','email'];
+    
+    public function initDataFields()
+    {
+        
+        $this->addField('id', new IntegerField(['readOnly'=>true, 'columnName'=>'ComapnyID']))
+             ->addField('name', new CharField(['columnName'=>'Company_name']))
+             ->addField('address', new CharField(['columnName'=>'Address']))
+             ->addField('city', new CharField(['columnName'=>'City']))
+             ->addField('state', new CharField(['columnName'=>'State']))
+             ->addField('zip', new CharField(['columnName'=>'Zip']))
+             ->addField('county', new CharField())
+             ->addField('area_code', new IntegerField(['columnName'=>'AreaCode']))
+             ->addField('phone', new CharField(['columnName'=>'Comp_phone']))
+             ->addField('domain', new CharField())
+             ->addField('sic', new CharField(['columnName'=>'SIC']))
+             ->addField('revenue', new IntegerField(['columnName'=>'Rev']))
+             ->addField('employees', new IntegerField(['columnName'=>'Emps']))
+             ->addField('exp_id', new IntegerField(['writeOnly'=>true,'columnName'=>'ExpID']))
+             ->addField('naics', new IntegerField(['columnName'=>'NAICS']))
+             ->addField('year_founded', new IntegerField())
+             ->addField('f1000', new IntegerField())
+             ->addField('alexa', new IntegerField())
+             ->addField('fbpage', new CharField())
+             ->addField('opt_out', new BooleanField(['writeOnly'=>true]))
+             ->addField('location', new SplitPointField(['latitudeColumn' => 'latitude', 'longitudeColumn' => 'longitude', 'allowNull' => true]));
+    }
+    
+    
+}
+```
