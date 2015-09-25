@@ -130,6 +130,7 @@ There is an object for each one of your favorite data types. Below is the list.
  * TimeField 
  * URLField 
  * UUIDField 
+ * TransformerField (fractal)
 
 ### Data Field Condition Attributes 
 
