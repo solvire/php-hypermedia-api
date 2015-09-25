@@ -45,11 +45,22 @@ abstract class LaravelModelSerializer extends BaseSerializer
         return $this->toArray();
     }
 
-    public function toArray()
+    /**
+     * is update = when updating the database
+     *
+     * @param string $isUpdate            
+     * @return multitype:NULL
+     */
+    public function toArray($isUpdate = false)
     {
         $ret = [];
         $dfc = $this->getDataFieldCollection();
         foreach ($dfc as $name => $dataField) {
+            
+            // write only fields should not be displayed 
+            if($dataField->writeOnly())
+                continue;
+            
             $ret[$name] = $dataField->getData();
         }
         
