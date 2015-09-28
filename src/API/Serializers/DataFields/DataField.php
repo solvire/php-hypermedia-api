@@ -144,6 +144,11 @@ abstract class DataField
     {
         return (boolean) $this->allowNull;
     }
+    
+    public function allowEmpty()
+    {
+        return (boolean) $this->allowEmpty;
+    }
 
     public function defaultValue()
     {
