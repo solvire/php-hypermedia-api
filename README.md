@@ -1,4 +1,4 @@
-# PHP Hypermedia API Wrapper for HATEOAS HTTP or REST Services
+# PHP Hypermedia API Layer for HATEOAS HTTP or REST Services
 ## Repo: php-hypermedia-api
 
 [![Build Status](https://travis-ci.org/solvire/php-hypermedia-api.svg?branch=master)](https://travis-ci.org/solvire/php-hypermedia-api)
