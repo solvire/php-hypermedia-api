@@ -66,4 +66,10 @@ class TransformerField extends DataField
     {
         return $this->transformer->transform($this->data);
     }
+    
+    public function setData($data)
+    {
+        $this->data = $data;
+        return $this;
+    }
 }

@@ -18,12 +18,18 @@ class SerializerField extends DataField
 
     protected $requiredFields = [
         'serializer',
+        'callback',
     ];
 
     /**
      * @var \League\Fractal\SerializerAbstract $serializer 
      */
     protected $serializer = null;
+    
+    /**
+     * @var closure 
+     */
+    protected $callback = null;
 
     /**
      * 
@@ -34,6 +40,7 @@ class SerializerField extends DataField
     {
         Ch::ek($options, $this->requiredFields);
         $this->serializer = $options['serializer'];
+        $this->callback = $options['callback'];
         
         // make sure that the serializer is set up properly 
         if(! $this->serializer instanceof \Solvire\API\Serializers\BaseSerializer)
@@ -59,6 +66,17 @@ class SerializerField extends DataField
      */
     public function getData()
     {
-        return $this->serializer->transform($this->data);
+        return $this->serializer->loadData($this->data);
     }
+    
+    /**
+     * 
+     * @param Model $model
+     */
+    public function setData($model)
+    {
+        $cb = $this->callback;
+        $this->data = $cb($model);
+    }
+    
 }

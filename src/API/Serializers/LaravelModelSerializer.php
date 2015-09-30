@@ -101,7 +101,7 @@ abstract class LaravelModelSerializer extends BaseSerializer
                 
                 // this might be better as a callback instead 
                 // get the field name to call
-                
+                $dataField->setData($model);
                 
                 
             }
