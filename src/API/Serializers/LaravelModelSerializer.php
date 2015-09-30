@@ -3,6 +3,8 @@ namespace Solvire\API\Serializers;
 
 use Illuminate\Database\Eloquent\Model;
 use Solvire\API\Serializers\DataFields\SplitPointField;
+use Solvire\API\Serializers\DataFields\SerializerField;
+use Solvire\API\Serializers\DataFields\TransformerField;
 
 /**
  * Map a Laravel 5.x model to a serializer
@@ -78,9 +80,9 @@ abstract class LaravelModelSerializer extends BaseSerializer
         if (! $model instanceof Model)
             throw new \RuntimeException("the object must be of type Illuminate\Database\Eloquent\Model ");
             
-            // loop through all the set fields in the collection
-            // if they have a matching name then load them up from the model
-            // if they have a matching columnName then find the value and load that up instead
+        // loop through all the set fields in the collection
+        // if they have a matching name then load them up from the model
+        // if they have a matching columnName then find the value and load that up instead
         $dfc = $this->getDataFieldCollection();
         foreach ($dfc as $name => $dataField) {
             $col = $dataField->columnName();
@@ -92,10 +94,34 @@ abstract class LaravelModelSerializer extends BaseSerializer
                 continue;
             }
             
-            // if we have a column name then use that first
-            $data = ($col) ? $model->$col : $model->name;
             
-            if (($data === null || $data === '') && ! $dataField->allowNull())
+            // if this is a child serializer object then pass it down
+            // we assume that since we are in laravel environment that we will have subs of the same
+            // also assuming that the name of the column is the function name 
+            if($dataField instanceof SerializerField) {
+                
+                // this might be better as a callback instead 
+                // get the field name to call
+                $dataField->setData($model);
+                continue;
+                
+            }
+            
+            // if this is a child transformer object then pass it down
+            // I need more use cases to see where htis will break 
+            if($dataField instanceof TransformerField) {
+                $dataField->setData($model);
+                continue;
+            }
+            
+            
+            // if we have a column name then use that first
+            $data = ($col) ? $model->$col : $model->$name;
+            
+            if (($data === null) && ! $dataField->allowNull())
+                continue;
+            
+            if (($data === '') && ! $dataField->allowEmpty())
                 continue;
             
             $dataField->setData($data);

@@ -28,6 +28,8 @@ abstract class DataField
     protected $required = false;
 
     protected $allowNull = false;
+    
+    protected $allowEmpty = false;
 
     protected $defaultValue = null;
 
@@ -50,6 +52,8 @@ abstract class DataField
     protected $castTypes = [
         'string',
         'integer',
+        'datetime',
+        'time',
         'object'
     ];
 
@@ -60,19 +64,13 @@ abstract class DataField
         'writeOnly',
         'required',
         'allowNull',
+        'allowEmpty',
         'defaultValue',
         'initial',
         'label',
         'helpText',
         'style',
         'validators'
-    ];
-
-    protected $castOptions = [
-        'string',
-        'integer',
-        'datetime',
-        'time'
     ];
 
     /**
@@ -145,6 +143,11 @@ abstract class DataField
     public function allowNull()
     {
         return (boolean) $this->allowNull;
+    }
+    
+    public function allowEmpty()
+    {
+        return (boolean) $this->allowEmpty;
     }
 
     public function defaultValue()

@@ -21,12 +21,31 @@ class DateTimeField extends DataField
 
     /**
      * default formatting of ISO8601
+     * 
+     * NOTE: make sure to set the formatting that will be coming in. 
+     * It can be set in the constructor or after the fact  
      *
      * @var string [Y-m-d\TH:i:sO]
      */
     protected $format = Carbon::ISO8601;
 
+    /**
+     * 
+     * @var unknown
+     */
     protected $cast = 'datetime';
+    
+    /**
+     * 
+     * @param array $options
+     */
+    public function __construct($options)
+    {
+        // load up the format at creation time  
+        if(isset($options['format']))
+            $this->format = $options['format'];
+        parent::__construct($options);
+    }
 
     /**
      *
@@ -56,6 +75,15 @@ class DateTimeField extends DataField
         
         $this->data = $date;
         return $this;
+    }
+    
+    /**
+     * 
+     * @param string $format
+     */
+    public function setFormat($format)
+    {
+        $this->format = $format;
     }
 
     /**
