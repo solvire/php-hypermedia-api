@@ -130,7 +130,11 @@ There is an object for each one of your favorite data types. Below is the list.
  * TimeField 
  * URLField 
  * UUIDField 
+ * PhoneField
+ * GenderField (normalized)
  * TransformerField (fractal)
+ * SerializerField (recursive)
+ 
 
 ### Data Field Condition Attributes 
 
