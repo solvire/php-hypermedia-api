@@ -18,12 +18,19 @@ class TransformerField extends DataField
 
     protected $requiredFields = [
         'transformer',
+        'callback'
     ];
 
     /**
      * @var \League\Fractal\TransformerAbstract $transformer 
      */
     protected $transformer = null;
+    
+    /**
+     * 
+     * @var closure 
+     */
+    protected $callback = null;
 
     /**
      * 
@@ -34,6 +41,7 @@ class TransformerField extends DataField
     {
         Ch::ek($options, $this->requiredFields);
         $this->transformer = $options['transformer'];
+        $this->callback = $options['callback'];
         
         // make sure that the transformer is set up properly 
         if(! $this->transformer instanceof \League\Fractal\TransformerAbstract)
@@ -67,9 +75,17 @@ class TransformerField extends DataField
         return $this->transformer->transform($this->data);
     }
     
-    public function setData($data)
+    
+    /**
+     *
+     * @param Model $model
+     */
+    public function setData($model)
     {
-        $this->data = $data;
+        $cb = $this->callback;
+        $this->data = $cb($model);
         return $this;
-    }
+    }    
+
+    
 }

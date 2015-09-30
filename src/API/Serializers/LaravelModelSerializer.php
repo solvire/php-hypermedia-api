@@ -4,6 +4,7 @@ namespace Solvire\API\Serializers;
 use Illuminate\Database\Eloquent\Model;
 use Solvire\API\Serializers\DataFields\SplitPointField;
 use Solvire\API\Serializers\DataFields\SerializerField;
+use Solvire\API\Serializers\DataFields\TransformerField;
 
 /**
  * Map a Laravel 5.x model to a serializer
@@ -102,13 +103,20 @@ abstract class LaravelModelSerializer extends BaseSerializer
                 // this might be better as a callback instead 
                 // get the field name to call
                 $dataField->setData($model);
+                continue;
                 
-                
+            }
+            
+            // if this is a child transformer object then pass it down
+            // I need more use cases to see where htis will break 
+            if($dataField instanceof TransformerField) {
+                $dataField->setData($model);
+                continue;
             }
             
             
             // if we have a column name then use that first
-            $data = ($col) ? $model->$col : $model->name;
+            $data = ($col) ? $model->$col : $model->$name;
             
             if (($data === null) && ! $dataField->allowNull())
                 continue;

@@ -22,6 +22,14 @@ class BooleanField extends DataField
      */
     public function setData($data)
     {
+        // a hack for right now. 
+        // need a truthy table 
+        if($data === '0' || $data === 0)
+            $data = false;
+        
+        if($data === '1' || $data === 1)
+            $data = true;
+        
         if (! is_bool($data))
             throw new InvalidParameterException('BooleanField data must be a boolean');
         

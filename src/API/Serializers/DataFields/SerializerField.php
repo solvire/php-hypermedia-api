@@ -77,6 +77,7 @@ class SerializerField extends DataField
     {
         $cb = $this->callback;
         $this->data = $cb($model);
+        return $this;
     }
     
 }
