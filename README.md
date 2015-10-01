@@ -130,7 +130,11 @@ There is an object for each one of your favorite data types. Below is the list.
  * TimeField 
  * URLField 
  * UUIDField 
+ * PhoneField
+ * GenderField (normalized)
  * TransformerField (fractal)
+ * SerializerField (recursive)
+ 
 
 ### Data Field Condition Attributes 
 
@@ -320,3 +324,130 @@ The server response will look like this. It should format the fields into their 
     "you": "HTTPie/0.9.2"
 }
 ```
+
+
+I've included a class here with some examples of two data field types: TransformerField and SerializerField.  As you expect these perform complex nested serializations. Below this class is an example of a sample output. 
+
+```php
+use Solvire\API\Serializers\DataFields\CharField;
+use Solvire\API\Serializers\DataFields\BooleanField;
+use Solvire\API\Serializers\DataFields\DateTimeField;
+use Solvire\API\Serializers\DataFields\IntegerField;
+use Solvire\API\Serializers\DataFields\PhoneField;
+use Solvire\API\Serializers\LaravelModelSerializer;
+use Solvire\API\Serializers\DataFields\SerializerField;
+use Solvire\API\Serializers\DataFields\TransformerField;
+use Solvire\API\Serializers\DataFields\SplitPointField;
+use LeadFerret\Models\Transformers\API\DepartmentToCategoryTransformer;
+use Solvire\API\Serializers\DataFields\GenderField;
+
+
+/**
+ * Serialize a contact object 
+ * 
+ * @author solvire <stevenjscott@gmail.com>
+ * @package Serializers
+ * @namespace LeadFerret\Http\Controllers\API\Serializers
+ */
+class ContactSerializer extends LaravelModelSerializer
+{
+
+    /**
+     * (non-PHPdoc)
+     * @see \Solvire\API\Serializers\BaseSerializer::initDataFields()
+     */
+    public function initDataFields()
+    {
+
+        // the serializer field takes a closure 
+        $company = function ($model) {
+            return $model->company;
+        };
+        
+        $getModel = function ($model){
+            return $model;
+        };
+        
+        $this->addField('id', new IntegerField(['readOnly'=>true, 'columnName'=>'ContactID']))
+             ->addField('first_name', new CharField(['columnName'=>'first_name']))
+             ->addField('last_name', new CharField(['columnName'=>'last_name']))
+             ->addField('title', new CharField(['columnName'=>'user_title']))
+             ->addField('phone', new PhoneField(['columnName'=>'contact_phone']))
+             ->addField('created', new DateTimeField(['columnName'=>'created_on','format'=>'Y-m-d H:i:s']))
+             ->addField('score', new IntegerField())
+             ->addField('crowd_score', new IntegerField())
+             ->addField('title_level', new CharField(['columnName'=>'title_levels']))
+             ->addField('gender', new GenderField(['maleValue'=>'Male','femaleValue'=>'Female'])) // normalized gender values 
+             ->addField('ads_status', new IntegerField(['writeOnly'=>true]))
+             ->addField('useragent', new CharField())
+             ->addField('device', new CharField(['writeOnly'=>true,'columnName'=>'uadevice']))
+             ->addField('opt_out', new BooleanField(['writeOnly'=>true]))
+             ->addField('company', new SerializerField( ['serializer'=>new CompanySerializer(), 'callback' => $company] )) 
+             ->addField('professional_categories', new TransformerField(['transformer'=> (new DepartmentToCategoryTransformer()), 'callback' => $getModel ])); 
+    }
+}
+```
+The serializer field is basically a tested data field for bringing in already defined serializers. 
+
+The transformer can transform your data in any format you need. Literally. I had a unique case I had to combine a lot of fields to create the data as it was so I passed the model in the closure. 
+
+
+And the output:
+
+```json
+{
+    "currentItemCount": 1, 
+    "items": [
+        {
+            "company": {
+                "address": "4209 Technology Drive", 
+                "alexa": 0, 
+                "area_code": 510, 
+                "city": "Fremont", 
+                "county": "Alameda", 
+                "domain": "123.com", 
+                "employees": 15, 
+                "f1000": 0, 
+                "fbpage": "", 
+                "id": 38252, 
+                "location": {
+                    "latitude": 37.520000457764, 
+                    "longitude": -121.95999908447
+                }, 
+                "naics": 0, 
+                "name": "3PARdata, Inc.", 
+                "phone": "510-413-5999", 
+                "revenue": 35, 
+                "sic": "3572", 
+                "state": "CA", 
+                "year_founded": 1999, 
+                "zip": "94538"
+            }, 
+            "created": {
+                "date": "2015-09-30 06:06:55.000000", 
+                "timezone": "UTC", 
+                "timezone_type": 3
+            }, 
+            "crowd_score": 0, 
+            "first_name": "Jeff", 
+            "gender": "male", 
+            "id": 12756, 
+            "last_name": "Song", 
+            "phone": "510-413-1234", 
+            "professional_categories": [
+                "engineering", 
+                "photographer"
+            ], 
+            "score": 38, 
+            "title": "Vice President of Engineering and Founder", 
+            "title_level": "VP", 
+            "useragent": "Chrome"
+        }
+    ], 
+    "itemsPerPage": "50", 
+    "pageIndex": 1, 
+    "totalItems": 1, 
+    "totalPages": 1
+}
+```
+
