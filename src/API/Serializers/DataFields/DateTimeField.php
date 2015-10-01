@@ -39,7 +39,7 @@ class DateTimeField extends DataField
      * 
      * @param array $options
      */
-    public function __construct($options=[])
+    public function __construct($options=null)
     {
         // load up the format at creation time  
         if(isset($options['format']))
