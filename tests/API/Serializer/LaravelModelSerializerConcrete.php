@@ -39,7 +39,7 @@ class LaravelModelSerializerConcrete extends LaravelModelSerializer
             ->addField('state', new CharField([
             'columnName' => 'State'
         ]))
-            ->addField('zipcode', new IntegerField())
+            ->addField('zipcode', new CharField())
             ->addField('email', new EmailField())
             ->addField('location', new SplitPointField([
             'latitudeColumn' => 'latitude',

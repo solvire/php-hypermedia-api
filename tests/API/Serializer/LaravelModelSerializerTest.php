@@ -26,7 +26,7 @@ class LaravelModelSerializerTest extends \BaseTestCase
         $co->State = 'CA';
         $co->zipcode = '91361';
         $co->latitude = 34.1234;
-        $co->longitude = - 119.3908;
+        $co->longitude = -119.3908;
         $co->email = 'test@testdomain.com';
         
         $ser->setModel($co);
