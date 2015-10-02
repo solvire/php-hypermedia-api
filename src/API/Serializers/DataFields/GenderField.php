@@ -46,7 +46,7 @@ class GenderField extends DataField
     public function setData($data)
     {
         if (! is_string($data))
-            throw new \RuntimeException('GenderField data must be a valid representation of a normalized gender ');
+            throw new \RuntimeException('GenderField data must be a valid representation of a normalized gender : ' . $data . ' in ' . $this->name );
         
         $gender = G::spot($data);
         

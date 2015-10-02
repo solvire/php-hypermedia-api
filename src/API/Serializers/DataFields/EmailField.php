@@ -17,7 +17,7 @@ class EmailField extends DataField
     public function setData($data)
     {
         if (! is_string($data) || ! v::email()->validate($data))
-            throw new \RuntimeException('EmailField data must be a valid representation of an email address ');
+            throw new \RuntimeException('EmailField data must be a valid representation of an email address : ' . $data . ' in ' . $this->name );
         
         $this->data = $data;
         return $this;

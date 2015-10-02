@@ -46,7 +46,7 @@ class TransformerField extends DataField
         // make sure that the transformer is set up properly 
         if(! $this->transformer instanceof \League\Fractal\TransformerAbstract)
         {
-            throw new \RuntimeException("Your transformer must be of type League\Fractal\TransformerAbstract ");
+            throw new \RuntimeException("Your transformer must be of type League\Fractal\TransformerAbstract on " . $this->name );
         }
         
         if(!method_exists($this->transformer, 'transform'))

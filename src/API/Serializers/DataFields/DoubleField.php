@@ -18,7 +18,7 @@ class DoubleField extends DataField
     public function setData($data)
     {
         if (! is_double($data))
-            throw new InvalidParameterException('DoubleField data must be a decimal / float ');
+            throw new InvalidParameterException('DoubleField data must be a decimal / float : ' . $data . ' in ' . $this->name );
         
         $this->data = $data;
         return $this;

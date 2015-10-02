@@ -17,7 +17,7 @@ class CharField extends DataField
     public function setData($data)
     {
         if (! is_string($data))
-            throw new InvalidParameterException('CharField data must be a string ' . $data);
+            throw new InvalidParameterException('CharField data must be a string ' . $data . ' in ' . $this->name);
         
         $this->data = $data;
         return $this;

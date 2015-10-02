@@ -23,7 +23,7 @@ class URLField extends DataField
     public function setData($data)
     {
         if (! is_string($data) || ! v::url()->validate($data))
-            throw new \RuntimeException('URLField data must be a string representation of a URL ' . $data);
+            throw new \RuntimeException('URLField data must be a string representation of a URL : ' . $data . ' in ' . $this->name );
         
         $this->data = $data;
         return $this;

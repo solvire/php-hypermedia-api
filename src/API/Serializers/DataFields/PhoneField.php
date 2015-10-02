@@ -26,7 +26,7 @@ class PhoneField extends DataField
     public function setData($data)
     {
         if (! is_string($data) || ! v::phone()->validate($data))
-            throw new \RuntimeException('PhoneNumberField data must be a valid representation of a phone number ');
+            throw new \RuntimeException('PhoneNumberField data must be a valid representation of a phone number: ' . $data . ' in ' . $this->name );
         
         $this->data = $data;
         return $this;

@@ -19,7 +19,7 @@ class IPAddressField extends DataField
     public function setData($data)
     {
         if (! is_string($data))
-            throw new InvalidParameterException(__CLASS__ . ' data must be a string representation of an IP Address');
+            throw new InvalidParameterException(__CLASS__ . ' data must be a string representation of an IP Address: ' . $data . ' in ' . $this->name );
         
         $this->data = inet_pton($data);
         

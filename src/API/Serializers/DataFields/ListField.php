@@ -15,7 +15,7 @@ class ListField extends DataField
     public function setData($data)
     {
         if (! is_string($data) && ! is_array($data))
-            throw new \RuntimeException('ListField data must be a string CSV or other delimited list');
+            throw new \RuntimeException('ListField data must be a string CSV or other delimited list: in ' . $this->name );
         
         if (is_string($data))
             $data = explode($this->delimiter, $data);

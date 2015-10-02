@@ -35,7 +35,7 @@ class DateField extends DataField
     public function setData($data)
     {
         if (! ($data instanceof \DateTime))
-            throw new \RuntimeException('DateField data must be a DateTime object');
+            throw new \RuntimeException('DateField data must be a DateTime object: ' . $data . ' in ' . $this->name );
         $this->data = $data;
         return $this;
     }

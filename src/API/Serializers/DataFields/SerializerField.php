@@ -45,7 +45,7 @@ class SerializerField extends DataField
         // make sure that the serializer is set up properly 
         if(! $this->serializer instanceof \Solvire\API\Serializers\BaseSerializer)
         {
-            throw new \RuntimeException("Your serializer must be of type Solvire\API\Serializers\BaseSerializer ");
+            throw new \RuntimeException("Your serializer must be of type Solvire\API\Serializers\BaseSerializer on " . $this->name );
         }
         
         parent::__construct($options);

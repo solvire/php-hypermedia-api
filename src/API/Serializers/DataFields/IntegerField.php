@@ -15,7 +15,7 @@ class IntegerField extends DataField
     public function setData($data)
     {
         if (! is_int($data))
-            throw new \RuntimeException('IntegerField data must be an integer ');
+            throw new \RuntimeException('IntegerField data must be an integer ' . $data . ' in ' . $this->name);
         
         $this->data = $data;
         return $this;

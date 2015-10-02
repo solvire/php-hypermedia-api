@@ -31,7 +31,7 @@ class BooleanField extends DataField
             $data = true;
         
         if (! is_bool($data))
-            throw new InvalidParameterException('BooleanField data must be a boolean');
+            throw new InvalidParameterException('BooleanField data must be a boolean: ' . $data . ' in ' . $this->name );
         
         $this->data = $data;
         return $this;
