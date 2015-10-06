@@ -32,6 +32,11 @@ class DateTimeFieldTest extends \BaseTestCase
         $this->assertTrue($dateField->getData() instanceof \DateTime);
         $dateField->setData('2015-01-01T12:34:00-5:00');
         $this->assertTrue($dateField->getData() instanceof Carbon);
+        
+        $dataField = new DateTimeField();
+        $dataField->setFormat('Y-m-d H:i:s');
+        $dataField->setData('2015-01-01 12:30:00');
+        
         $dateField->setData('junk');
     }
 }

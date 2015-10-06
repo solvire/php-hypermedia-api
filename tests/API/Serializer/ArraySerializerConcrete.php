@@ -21,11 +21,6 @@ class ArraySerializerConcrete extends ArraySerializer
     public function initDataFields()
     {
         $this->addField('status', new CharField());
-        $this->addField('server_data', new CharField());
-        $this->addField('ip', new IPAddressField());
-        $this->addField('you', new CharField());
-        $this->addField('stage', new CharField());
-        $this->addField('alive', new BooleanField());
         $this->addField('timestamp', new DateTimeField());
     }
 }

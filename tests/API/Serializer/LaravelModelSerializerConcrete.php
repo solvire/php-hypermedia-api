@@ -4,6 +4,7 @@ namespace Solvire\API\Serializers;
 use Solvire\API\Serializers\DataFields\CharField;
 use Solvire\API\Serializers\DataFields\EmailField;
 use Solvire\API\Serializers\DataFields\IntegerField;
+use Solvire\API\Serializers\DataFields\SerializerField;
 use Solvire\API\Serializers\LaravelModelSerializer;
 use Solvire\API\Serializers\DataFields\SplitPointField;
 
@@ -18,11 +19,16 @@ class LaravelModelSerializerConcrete extends LaravelModelSerializer
 
     /**
      * (non-PHPdoc)
-     * 
+     *
      * @see \Solvire\API\Serializers\BaseSerializer::initDataFields()
      */
     public function initDataFields()
     {
+        $health = function ()
+        {
+        	return ['status' => 'good', 'timestamp' => new \DateTime()];
+        };
+        
         $this->addField('id', new IntegerField([
             'readOnly' => true,
             'columnName' => 'ComapnyID'
@@ -45,6 +51,10 @@ class LaravelModelSerializerConcrete extends LaravelModelSerializer
             'latitudeColumn' => 'latitude',
             'longitudeColumn' => 'longitude',
             'allowNull' => true
+        ]))
+            ->addField('health', new SerializerField([
+            'serializer' => new ArraySerializerConcrete(),
+            'callback' => $health
         ]));
     }
 }
