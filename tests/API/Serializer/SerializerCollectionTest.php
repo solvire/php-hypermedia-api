@@ -10,39 +10,36 @@ use PhpCollection\Sequence;
  * @package Serializers
  * @namespace Solvire\API\Serializers
  */
-class SerializerCollection extends Sequence
+class SerializerCollectionTest extends \BaseTestCase
 {
 
     /**
-     * There isn't much to ordering here.
-     * Just use a numeric key and we will try tro sort later
-     *
-     * @param array $serializers
+     * 
      */
-    public function __construct($serializers = [])
+    public function testCanConstructSerializerCollection()
     {
-        foreach ($serializers as $key => $serializer) {
-            if (! ($serializer instanceof BaseSerializer)) {
-                throw new Exceptions\InvalidParameterException("Only search paramater objects allowed here.");
-            }
+        
+        $sers = [
+            's1' => new LaravelModelSerializerConcrete()
+        ];
+        
+        $col = new SerializerCollection($sers);
+        $col->add(new LaravelModelSerializerConcrete());
+        $arr = $col->toArray();
+        
+        try {
+            $col->add(new \stdClass());
+        } catch (\RuntimeException $e) {
+            $this->assertInstanceOf('\RuntimeException', $e);
         }
-        parent::__construct($serializers);
+        
+        
+        try {
+            new SerializerCollection([new \stdClass()]);
+        } catch (\RuntimeException $e) {
+            $this->assertInstanceOf('\RuntimeException', $e);
+        }
+        
     }
 
-    /**
-     *
-     * @return array
-     */
-    public function toArray()
-    {
-        return $this->all();
-    }
-
-    public function add($serializer)
-    {
-        if (! ($serializer instanceof BaseSerializer)) {
-            throw new Exceptions\InvalidParameterException("Only search paramater objects allowed here.");
-        }
-        return parent::add($serializer);
-    }
 }

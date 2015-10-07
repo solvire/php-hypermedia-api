@@ -46,7 +46,7 @@ class SerializerCollection extends Sequence
     public function add($serializer)
     {
         if (! ($serializer instanceof BaseSerializer)) {
-            throw new \RuntimeException("Only search paramater objects allowed here.");
+            throw new Exceptions\InvalidParameterException("Only search paramater objects allowed here.");
         }
         return parent::add($serializer);
     }
