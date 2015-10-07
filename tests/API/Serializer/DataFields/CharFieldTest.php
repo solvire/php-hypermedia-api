@@ -23,6 +23,7 @@ class CharFieldTest extends \BaseTestCase
         
         $this->assertEquals($char->columnName(), $options['columnName']);
         $this->assertEquals($char->allowNull(), $options['allowNull']);
+        $this->assertEquals($char->allowEmpty(), $options['allowEmpty']);
         $this->assertEquals($char->readOnly(), $options['readOnly']);
         $this->assertEquals($char->writeOnly(), $options['writeOnly']);
         $this->assertEquals($char->required(), $options['required']);
@@ -59,6 +60,7 @@ class CharFieldTest extends \BaseTestCase
             'writeOnly' => false,
             'required' => true,
             'allowNull' => false,
+            'allowEmpty' => false,
             'defaultValue' => 'somestring',
             'initial' => 'newvalue',
             'label' => 'The Value',

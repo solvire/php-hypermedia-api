@@ -31,6 +31,8 @@ class SerializerFieldTest extends \BaseTestCase
         $this->assertTrue(isset($rval['status']));
         $this->assertEquals('unit_test',$rval['status']);
         $this->assertInstanceOf('\Carbon\Carbon', $rval['timestamp']);
+        
+        $this->assertInstanceOf('\Solvire\API\Serializers\BaseSerializer', $rx->getSerializer());
     }
 
     /**

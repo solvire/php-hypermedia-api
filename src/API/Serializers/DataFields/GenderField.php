@@ -26,7 +26,7 @@ class GenderField extends DataField
      *
      * @param array $options
      */
-    public function __construct($options)
+    public function __construct($options=[])
     {
         // load up the format at creation time
         if(isset($options['maleValue']))
@@ -50,7 +50,12 @@ class GenderField extends DataField
         
         $gender = G::spot($data);
         
-        $this->data = $gender;
+        if($gender === 'male')
+            $this->data = $this->maleValue;
+        elseif ($gender === 'female')
+            $this->data = $this->femaleValue;
+        
+        
         return $this;
     }
 
