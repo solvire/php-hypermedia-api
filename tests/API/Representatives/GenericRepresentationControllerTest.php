@@ -4,6 +4,7 @@ namespace Solvire\Tests\API\Representatives;
 use Solvire\Tests\API\Serializers\ArraySerializerConcrete;
 use Solvire\Tests\API\Renderers\ListRendererConcrete;
 use Solvire\API\Representatives\GenericRepresentationController;
+use Illuminate\Http\Request;
 
 /**
  * Providing some basic CRUD level stuff
@@ -20,13 +21,25 @@ class GenericRepresentationControllerTest extends \BaseTestCase
      */
     public function testCanCreateGenericRepController()
     {
-        $ser = new ArraySerializerConcrete();
-        $ren = new ListRendererConcrete();
         
         $rep = new GenericRepresentationController();
         $this->assertInstanceOf('\Solvire\API\Representatives\GenericRepresentationController', $rep);
+        
+        
+        $ser = new ArraySerializerConcrete();
         $rep->setSerializer($ser);
         $this->assertInstanceOf('\Solvire\Tests\API\Serializers\ArraySerializerConcrete', $rep->getSerializer());
+        
+        
+        $ren = new ListRendererConcrete();
+        $rep->setRenderer($ren);
+        $this->assertInstanceOf('\Solvire\Tests\API\Renderers\ListRendererConcrete',$rep->getRenderer());
+        
+        $request = new Request();
+        $request->setMethod('GET');
+        $rep->setRequest($request);
+        $this->assertInstanceOf('\Illuminate\Http\Request', $rep->getRequest());
+        
         
         
     }
