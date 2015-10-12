@@ -27,15 +27,15 @@ class GenericRepresentationController extends BaseRepresentationController
 
     /**
      */
-    public function recordCount()
-    {
-        return $this->recordCount();
-    }
+//     public function recordCount()
+//     {
+//         return $this->recordCount();
+//     }
 
-    public function hasMorePages()
-    {
-        return (boolean) $this->hasMorePages;
-    }
+//     public function hasMorePages()
+//     {
+//         return (boolean) $this->hasMorePages;
+//     }
 
     public function process()
     {
