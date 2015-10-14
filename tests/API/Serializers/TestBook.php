@@ -14,4 +14,10 @@ class TestBook
     public $title = 'A Snowy Flake';
     public $year = 2021;
     
+    public function __construct($id=null)
+    {
+        if($id)
+            $this->id = $id;
+    }
+    
 }
