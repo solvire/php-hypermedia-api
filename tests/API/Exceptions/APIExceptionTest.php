@@ -3,6 +3,9 @@ namespace Solvire\Tests\API\Exceptions;
 
 use Solvire\API\Exceptions\InvalidParameterException;
 use Solvire\API\Exceptions\ConditionalFailureException;
+use Solvire\API\Exceptions\AuthorizationException;
+use Solvire\API\Exceptions\InvalidCredentialsException;
+use Solvire\API\Exceptions\InvalidPayloadException;
 
 
 /**
@@ -47,6 +50,24 @@ class APIExceptionTest extends \BaseTestCase
         $this->assertEquals($headers,$e->getHeaders());
         $this->assertEquals($errors,$e->getErrors());
     
+    }
+    
+    public function testCanCreateAuthorizationException()
+    {
+        $e = new AuthorizationException("TESTING");
+        $this->assertEquals(403,$e->getStatusCode());
+    }
+    
+    public function testCanCreateInvalidPayloadException()
+    {
+        $e = new InvalidPayloadException("TESTING");
+        $this->assertEquals(422,$e->getStatusCode());
+    }
+    
+    public function testCanCreateInvalidCredentialsException()
+    {
+        $e = new InvalidCredentialsException("TESTING");
+        $this->assertEquals(401,$e->getStatusCode());
     }
 
 }
