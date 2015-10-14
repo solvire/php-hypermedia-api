@@ -14,9 +14,13 @@ class ListRendererConcrete extends ListRenderer
 {
     public $itemCount = 10;
     
+    public $perPage = 2;
+    
     public $path = 'http://scotttactical.com/';
     
     public $pageName = 'round';
+    
+    
     
     public function get()
     {
@@ -28,12 +32,10 @@ class ListRendererConcrete extends ListRenderer
         
         $options = ['path' => $this->path, 'pageName' => $this->pageName];
         
-        $this->resultSet = new LengthAwarePaginator($items, count($items), 1, 2, $options);
+        $this->resultSet = new LengthAwarePaginator($items, count($items), $this->perPage, 2, $options);
         
         return $this->paginate($this->resultSet);
         
     }
-    
-    
     
 }

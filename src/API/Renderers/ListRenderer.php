@@ -38,7 +38,7 @@ abstract class ListRenderer extends GenericRenderer implements Getable
 
     public function lastItem()
     {
-        return $this->resultSet->firstItem();
+        return $this->resultSet->lastItem();
     }
 
     public function lastPage()

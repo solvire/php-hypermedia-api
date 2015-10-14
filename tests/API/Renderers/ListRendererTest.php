@@ -19,54 +19,6 @@ use Solvire\Tests\API\Serializers\ArraySerializerConcrete;
 class ListRendererTest extends \BaseTestCase
 {
 
-    /**
-     * mock object for the
-     *
-     * @var \Illuminate\Pagination\LengthAwarePaginator
-     */
-    protected $resultSet = null;
-
-    protected $baseUrl = 'https://test.com';
-
-    public function setup()
-    {
-//         $this->resultSet = $this->getMockBuilder('\Illuminate\Pagination\LengthAwarePaginator')
-//             ->setMethods([
-//             'nextPageUrl',
-//             'previousPageUrl',
-//             'firstItem',
-//             'lastItem',
-//             'lastPage',
-//             'perPage',
-//             'currentPage',
-//             'hasPages',
-//             'hasMorePages',
-//             'isEmpty',
-//             'total',
-//             'getIterator'
-//         ])
-//             ->disableOriginalConstructor()
-//             ->getMock();
-        
-//         // Set up the expectation for the update() method
-//         // to be called only once
-//         // we are assuming this is SECOND PAGE
-//         $this->resultSet->expects($this->any())
-//             ->method('nextPageUrl')
-//             ->with($this->equalTo($this->baseUrl . '?page=3'));
-        
-//         $this->resultSet->expects($this->any())
-//             ->method('previousPageUrl')
-//             ->with($this->equalTo($this->baseUrl . '?page=1'));
-        
-//         $this->resultSet->expects($this->any())
-//             ->method('getIterator')
-//             ->with(['test']);
-        
-
-        
-    }
-
     public function testCanCreateListRendererAndRender()
     {
         $ren = new ListRendererConcrete();
@@ -75,9 +27,24 @@ class ListRendererTest extends \BaseTestCase
         $this->assertTrue(isset($vars['items']));
         $this->assertEquals($ren->itemCount, count($vars['items']));
         
-        $this->assertEquals($ren->path . '?' . $ren->pageName . '=3',$ren->nextPageUrl());
+        $nextPage = $ren->path . '?' . $ren->pageName . '=3';
+        $links = $ren->generateLinks();
         
-//         $ren->paginate($this->resultSet);
+        $this->assertEquals($nextPage,$ren->nextPageUrl());
+        $this->assertEquals($nextPage, $links['nextLink']);
+        $this->assertEquals($ren->previousPageUrl(), $links['previousLink']);
+        
+        $this->assertEquals($ren->perPage,$ren->perPage());
+        $this->assertEquals(3,$ren->firstItem());
+        $this->assertEquals(12,$ren->lastItem());
+        $this->assertTrue($ren->hasMorePages());
+        $this->assertFalse($ren->isEmpty());
+        
+        $ren->setPaginationLimit(99);
+        $this->assertEquals(99,$ren->getPaginationLimit());
+        
+        $this->assertNull($ren->getRequest());
+        
     }
 
     /**
