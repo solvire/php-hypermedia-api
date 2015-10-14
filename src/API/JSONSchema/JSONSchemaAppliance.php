@@ -21,9 +21,9 @@ class JSONSchemaAppliance implements Schemable
      */
     protected $resources = null;
 
-    public function __construct()
+    public function __construct($baseOptions = null)
     {
-        $this->constructBase();
+        $this->constructBase($baseOptions);
         $this->resources = new ResourceCollection();
     }
 
@@ -52,7 +52,7 @@ class JSONSchemaAppliance implements Schemable
         
         $this->base->setBaseUrl(isset($options['baseUrl']) ? $options['baseUrl'] : Ev::get('API_BASE_URL'));
         $this->base->setBasePath(isset($options['basePath']) ? $options['basePath'] : Ev::get('API_BASE_PATH'));
-        $this->base->setDocumentationUrl(isset($options['basePath']) ? $options['basePath'] : Ev::get('API_DOCUMENTATION_URL'));
+        $this->base->setDocumentationUrl(isset($options['documentationUrl']) ? $options['documentationUrl'] : Ev::get('API_DOCUMENTATION_URL'));
         $this->base->setName(isset($options['applicationName']) ? $options['applicationName'] : Ev::get('APPLICATION_NAME'));
         $this->base->setId(isset($options['id']) ? $options['id'] : Ev::get('APPLICATION_NAME') . ":" . Ev::get('API_VERSION'));
         $this->base->setVersion(isset($options['version']) ? $options['version'] : Ev::get('API_VERSION'));
@@ -75,14 +75,11 @@ class JSONSchemaAppliance implements Schemable
      */
     public function allSet()
     {
-        if ($this->base->allSet())
-            return true;
+        return $this->base->allSet();
     }
 
     public function toSchema()
     {
-        if ($this->allSet()) {
-            return $this->base->toSchema();
-        }
+        return $this->base->toSchema();
     }
 }

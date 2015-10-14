@@ -30,6 +30,14 @@
         <env name="SESSION_DRIVER" value="array"/>
         <env name="QUEUE_DRIVER" value="sync"/>
         <env name="DATABASE_DRIVER" value="sqlite"/>
+
+        <env name="API_BASE_URL" value="http://scotttactical.com/"/>
+        <env name="API_BASE_PATH" value="api/"/>
+        <env name="API_DOCUMENTATION_URL" value="https://github.com/solvire/php-hypermedia-api"/>
+        <env name="APPLICATION_NAME" value="hypermedia-test"/>
+        <env name="API_VERSION" value="v0.1"/>
+        <env name="API_DESCRIPTION" value="An API Description - ST"/>
+        
     </php>
     <logging>
         <log type="coverage-html" target="../coverage/hypermedia" charset="UTF-8"

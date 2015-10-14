@@ -151,12 +151,12 @@ class Base implements Schemable
     {
         $errors = [];
         foreach ($this->mandatoryFields as $field) {
-            if (! isset($this->$field))
+            if (! isset($this->$field) || $this->$field === null || $this->$field === '')
                 $errors[$field] = "Error the field: $field must be set in Base.";
         }
         
         if (count($errors))
-            throw new \Exception('Errors . ' . print_r($errors, 1));
+            throw new \RuntimeException('Errors . ' . print_r($errors, 1));
         
         return true;
     }
