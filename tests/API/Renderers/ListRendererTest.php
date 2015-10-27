@@ -25,6 +25,7 @@ class ListRendererTest extends \BaseTestCase
         $this->assertEquals($ren->itemCount, count($vars['items']));
         
         $nextPage = $ren->path . '?' . $ren->pageName . '=3';
+        $ren->setPaginationLimit(50);
         $links = $ren->generateLinks();
         
         $this->assertEquals($nextPage,$ren->nextPageUrl());

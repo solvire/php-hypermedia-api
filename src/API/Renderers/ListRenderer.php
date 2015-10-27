@@ -84,7 +84,7 @@ abstract class ListRenderer extends GenericRenderer implements Getable
 
     public function getPaginationLimit()
     {
-        if($this->paginationLimit == null)
+        if($this->paginationLimit === null || $this->paginationLimit < 1)
             throw new \RuntimeException("The page limit is not set");
         return $this->paginationLimit;
     }
