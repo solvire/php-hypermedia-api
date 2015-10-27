@@ -19,6 +19,17 @@ class LaravelRepresentationController extends GenericRepresentationController
     {
         $this->model = $model;
     }
+    
+    public function setModel(Model $model)
+    {
+        $this->model = $model;
+        return $this;
+    }
+    
+    public function getModel()
+    {
+        return $this->model;
+    }
 
     /**
      * HTTP/1.1 200 OK
@@ -51,7 +62,7 @@ class LaravelRepresentationController extends GenericRepresentationController
      */
     public function getGenericContext()
     {
-        
         // lets put together the data for render
+        throw new \RuntimeException("Not implemented");
     }
 }
