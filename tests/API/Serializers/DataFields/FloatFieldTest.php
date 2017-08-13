@@ -7,7 +7,7 @@ use Solvire\API\Serializers\DataFields\FloatField;
  *
  * @group DataFields
  *
- * @author solvire <stevenjscott@gmail.com>
+ * @author solvire <info@scotttactical.com>
  * @package DataFields
  * @namespace Solvire\Tests\API\Serializers\DataFields
  */

@@ -8,7 +8,7 @@ use Solvire\Tests\API\Serializers\CompanyModel;
  * Not really testing much since there isn't much going on inside laravel generic tester. 
  *
  * @group RepresentationControllers
- * @author solvire <stevenjscott@gmail.com>
+ * @author solvire <info@scotttactical.com>
  * @package RepresentationControllers
  * @namespace namespace Solvire\API\Representatives;
  */

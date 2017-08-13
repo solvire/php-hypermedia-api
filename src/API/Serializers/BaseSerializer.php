@@ -7,7 +7,7 @@ use Solvire\API\Serializers\DataFields\DataFieldCollection;
 /**
  *
  * @see README.md
- * @author solvire <stevenjscott@gmail.com>
+ * @author solvire <info@scotttactical.com>
  * @package Serializers
  * @namespace Solvire\API\Serializers
  */

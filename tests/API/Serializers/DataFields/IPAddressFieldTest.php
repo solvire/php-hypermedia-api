@@ -10,7 +10,7 @@ use Solvire\API\Serializers\DataFields\IPAddressField;
  *
  * @see http://php.net/manual/en/function.inet-pton.php
  * @see http://php.net/manual/en/function.inet-ntop.php
- * @author solvire <stevenjscott@gmail.com>
+ * @author solvire <info@scotttactical.com>
  * @package DataFields
  * @namespace Solvire\Tests\API\Serializers\DataFields
  */

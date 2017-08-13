@@ -4,7 +4,7 @@ namespace Solvire\API\Representatives;
 /**
  * Providing some basic CRUD level stuff
  *
- * @author solvire <stevenjscott@gmail.com>
+ * @author solvire <info@scotttactical.com>
  * @package RepresentationControllers
  * @namespace namespace Solvire\API\Representatives;
  */

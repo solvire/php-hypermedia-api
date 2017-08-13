@@ -9,7 +9,7 @@ use Solvire\Utilities\OptionsChecker as Ch;
  * My first example was changing a columnar data set into a row based set with mappings
  *
  * @see /examples for the transformer 
- * @author solvire <stevenjscott@gmail.com>
+ * @author solvire <info@scotttactical.com>
  * @package DataFields
  * @namespace Solvire\API\Serializers\DataFields
  */

@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\DB;
 /**
  * HyperMedia builder
  *
- * @author solvire <stevenjscott@gmail.com>
+ * @author solvire <info@scotttactical.com>
  * @package API
  * @namespace Solvire\API
  */

@@ -4,7 +4,7 @@ namespace Solvire\API\Renderers;
 /**
  * Interface for the PUT method UPDATE
  *
- * @author solvire <stevenjscott@gmail.com>
+ * @author solvire <info@scotttactical.com>
  * @package Renderers
  * @namespace Solvire\API\Renderers
  */

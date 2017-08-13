@@ -9,7 +9,7 @@ use Solvire\Utilities\OptionsChecker as Ch;
  * In GIS databases this would be one data element.
  *
  *
- * @author solvire <stevenjscott@gmail.com>
+ * @author solvire <info@scotttactical.com>
  * @package DataFields
  * @namespace Solvire\API\Serializers\DataFields
  */

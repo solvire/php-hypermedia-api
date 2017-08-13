@@ -8,7 +8,7 @@ use Solvire\API\Serializers\BaseSerializer;
  * Just outputs what the serializer is going to give back to it
  * must implement the get() funtion
  *
- * @author solvire <stevenjscott@gmail.com>
+ * @author solvire <info@scotttactical.com>
  * @package Renderers
  * @namespace Solvire\API\Renderers
  */

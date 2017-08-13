@@ -3,7 +3,7 @@ namespace Solvire\API\Exceptions;
 
 /**
  *
- * @author solvire <stevenjscott@gmail.com>
+ * @author solvire <info@scotttactical.com>
  * @package API
  * @namespace Solvire\API\Exceptions
  * @see http://tools.ietf.org/html/rfc4918#section-11.2

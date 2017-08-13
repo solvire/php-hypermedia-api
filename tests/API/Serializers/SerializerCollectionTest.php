@@ -6,7 +6,7 @@ use Solvire\API\Serializers\SerializerCollection;
 
 /**
  * 
- * @author solvire <stevenjscott@gmail.com>
+ * @author solvire <info@scotttactical.com>
  * @package Serializers
  * @namespace Solvire\Tests\API\Serializers
  */

@@ -6,7 +6,7 @@ use Solvire\Application\Environment as Ev;
 
 /**
  *
- * @author solvire <stevenjscott@gmail.com>
+ * @author solvire <info@scotttactical.com>
  * @package JSONSchema
  * @namespace Solvire\API\JSONSchema
  */

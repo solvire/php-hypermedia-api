@@ -6,7 +6,7 @@ use Solvire\API\Renderers\ListRenderer;
 use Illuminate\Pagination\LengthAwarePaginator;
 /**
  *
- * @author solvire <stevenjscott@gmail.com>
+ * @author solvire <info@scotttactical.com>
  * @package Renderers
  * @namespace Solvire\API\Renderers\GenericRenderer
  */

@@ -9,7 +9,7 @@ require_once (realpath(__DIR__ . '/LaravelModelSerializerConcrete.php'));
  * Map a Laravel 5.x model to a serializer
  * @group Serializers
  *
- * @author solvire <stevenjscott@gmail.com>
+ * @author solvire <info@scotttactical.com>
  * @package Serializers
  * @namespace Solvire\Tests\API\Serializers
  */

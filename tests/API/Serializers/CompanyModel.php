@@ -5,7 +5,7 @@ use Illuminate\Database\Eloquent\Model;
 
 /**
  * 
- * @author solvire <stevenjscott@gmail.com>
+ * @author solvire <info@scotttactical.com>
  */
 class CompanyModel extends Model
 {

@@ -9,7 +9,7 @@ use Solvire\Tests\API\Serializers\ArraySerializerConcrete;
  * @see https://github.com/laravel/framework/blob/5.1/tests/Pagination/PaginationPaginatorTest.php
  * @group Renderers
  * 
- * @author solvire <stevenjscott@gmail.com>
+ * @author solvire <info@scotttactical.com>
  * @package Renderers
  * @namespace Solvire\API\Renderers
  */

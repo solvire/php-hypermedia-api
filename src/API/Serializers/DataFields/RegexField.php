@@ -4,7 +4,7 @@ namespace Solvire\API\Serializers\DataFields;
 /**
  * hmm how to regex a regex
  *
- * @author solvire <stevenjscott@gmail.com>
+ * @author solvire <info@scotttactical.com>
  * @package DataFields
  * @namespace Solvire\API\Serializers\DataFields
  */

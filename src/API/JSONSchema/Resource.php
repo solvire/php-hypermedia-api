@@ -8,7 +8,7 @@ use Solvire\API\Serializers\BaseSerializer;
  * the ability to figure out what you can do to this resource.
  *
  *
- * @author solvire <stevenjscott@gmail.com>
+ * @author solvire <info@scotttactical.com>
  * @package JSONSchema
  * @namespace Solvire\API\JSONSchema
  */

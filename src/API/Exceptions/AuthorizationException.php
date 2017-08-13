@@ -6,7 +6,7 @@ namespace Solvire\API\Exceptions;
  * you are not permitted to do this.
  *
  *
- * @author solvire <stevenjscott@gmail.com>
+ * @author solvire <info@scotttactical.com>
  * @package API
  * @namespace Solvire\API\Exceptions
  */

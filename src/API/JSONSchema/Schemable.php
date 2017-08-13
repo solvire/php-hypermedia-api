@@ -4,7 +4,7 @@ namespace Solvire\API\JSONSchema;
 /**
  * returns the array/objects for json serialization
  *
- * @author solvire <stevenjscott@gmail.com>
+ * @author solvire <info@scotttactical.com>
  * @package JSONSchema
  * @namespace Solvire\API\JSONSchema
  */

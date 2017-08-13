@@ -11,7 +11,7 @@ use Solvire\API\Serializers\DataFields\EmailField;
  *
  * @group DataFields
  *
- * @author solvire <stevenjscott@gmail.com>
+ * @author solvire <info@scotttactical.com>
  * @package DataFields
  * @namespace Solvire\Tests\API\Serializers\DataFields
  */
@@ -25,7 +25,7 @@ class EmailFieldTest extends \BaseTestCase
      */
     public function testCanSetEmailData()
     {
-        $em1 = 'stevenjscott@gmail.com';
+        $em1 = 'info@scotttactical.com';
         $em2 = 'bademail#test.com';
         
         $ef = new EmailField();

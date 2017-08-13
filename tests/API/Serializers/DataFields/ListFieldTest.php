@@ -9,7 +9,7 @@ use Solvire\API\Serializers\DataFields\ListField;
  *
  * @group DataFields
  *
- * @author solvire <stevenjscott@gmail.com>
+ * @author solvire <info@scotttactical.com>
  * @package DataFields
  * @namespace Solvire\Tests\API\Serializers\DataFields
  */

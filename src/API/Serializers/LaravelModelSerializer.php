@@ -9,7 +9,7 @@ use Solvire\API\Serializers\DataFields\TransformerField;
 /**
  * Map a Laravel 5.x model to a serializer
  *
- * @author solvire <stevenjscott@gmail.com>
+ * @author solvire <info@scotttactical.com>
  * @package Serializers
  * @namespace Solvire\API\Serializers
  */

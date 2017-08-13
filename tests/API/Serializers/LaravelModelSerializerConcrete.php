@@ -10,7 +10,7 @@ use Solvire\API\Serializers\DataFields\SplitPointField;
 
 /**
  *
- * @author solvire <stevenjscott@gmail.com>
+ * @author solvire <info@scotttactical.com>
  * @package Serializers
  * @namespace Solvire\Http\Controllers\API\Serializers
  */

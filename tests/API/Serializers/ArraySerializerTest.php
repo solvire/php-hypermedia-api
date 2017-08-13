@@ -10,7 +10,7 @@ use Solvire\Tests\API\Serializers\ArraySerializerConcrete;
  *
  * @group Serializers
  * 
- * @author solvire <stevenjscott@gmail.com>
+ * @author solvire <info@scotttactical.com>
  * @package Serializers
  * @namespace Solvire\Tests\API\Serializers
  */

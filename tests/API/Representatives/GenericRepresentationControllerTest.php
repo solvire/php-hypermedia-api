@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
  * Providing some basic CRUD level stuff
  * 
  * @group RepresentationControllers
- * @author solvire <stevenjscott@gmail.com>
+ * @author solvire <info@scotttactical.com>
  * @package RepresentationControllers
  * @namespace namespace Solvire\API\Representatives;
  */

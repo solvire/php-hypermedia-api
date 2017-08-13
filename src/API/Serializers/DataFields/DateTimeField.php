@@ -12,7 +12,7 @@ use Carbon\Carbon;
  * @see http://carbon.nesbot.com/docs/
  *
  *
- * @author solvire <stevenjscott@gmail.com>
+ * @author solvire <info@scotttactical.com>
  * @package DataFields
  * @namespace Solvire\API\Serializers\DataFields
  */

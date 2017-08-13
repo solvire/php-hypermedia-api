@@ -6,7 +6,7 @@ namespace Solvire\API\JSONSchema;
  *
  * The Auth itself should have the scopes or their reference
  *
- * @author solvire <stevenjscott@gmail.com>
+ * @author solvire <info@scotttactical.com>
  * @package JSONSchema
  * @namespace Solvire\API\JSONSchema
  */

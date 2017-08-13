@@ -6,7 +6,7 @@ use Respect\Validation\Validator as v;
 /**
  * TODO need to find a library that handles url parsing well
  *
- * @author solvire <stevenjscott@gmail.com>
+ * @author solvire <info@scotttactical.com>
  * @package DataFields
  * @namespace Solvire\API\Serializers\DataFields
  */

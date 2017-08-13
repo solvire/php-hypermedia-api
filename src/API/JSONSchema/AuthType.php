@@ -6,7 +6,7 @@ namespace Solvire\API\JSONSchema;
  * But this represents the auth type.
  *
  *
- * @author solvire <stevenjscott@gmail.com>
+ * @author solvire <info@scotttactical.com>
  * @package JSONSchema
  * @namespace Solvire\API\JSONSchema
  */

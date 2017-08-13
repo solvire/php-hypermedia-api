@@ -6,7 +6,7 @@ namespace Solvire\API\Exceptions;
  * When something like a system error occures but we just need to blame it on someone so the client gets it.
  *
  *
- * @author solvire <stevenjscott@gmail.com>
+ * @author solvire <info@scotttactical.com>
  * @package API
  * @namespace Solvire\API\Exceptions
  */

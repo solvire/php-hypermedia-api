@@ -11,7 +11,7 @@ use Solvire\API\JSONSchema\JSONSchemaAppliance;
  *
  * @group JSONSchema
  *
- * @author solvire <stevenjscott@gmail.com>
+ * @author solvire <info@scotttactical.com>
  * @package JSONSchema
  * @namespace Solvire\API\JSONSchema
  */

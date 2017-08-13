@@ -9,7 +9,7 @@ use Solvire\Utilities\OptionsChecker as Ch;
  * If we tack on a serializer field we can attach this serializer to it. 
  * Not sure if this can scale indefinitely downward 
  *
- * @author solvire <stevenjscott@gmail.com>
+ * @author solvire <info@scotttactical.com>
  * @package DataFields
  * @namespace Solvire\API\Serializers\DataFields
  */

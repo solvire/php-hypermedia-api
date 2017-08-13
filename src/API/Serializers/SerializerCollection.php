@@ -7,7 +7,7 @@ use LeadFerret\Http\Controllers\API\Serializers\HealthSerializer;
 
 /**
  * 
- * @author solvire <stevenjscott@gmail.com>
+ * @author solvire <info@scotttactical.com>
  * @package Serializers
  * @namespace Solvire\API\Serializers
  */

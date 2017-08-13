@@ -6,7 +6,7 @@ namespace Solvire\API\Serializers\DataFields;
  *
  * needs some updating.
  *
- * @author solvire <stevenjscott@gmail.com>
+ * @author solvire <info@scotttactical.com>
  * @package DataFields
  * @namespace Solvire\API\Serializers\DataFields
  */

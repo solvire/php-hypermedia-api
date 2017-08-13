@@ -8,7 +8,7 @@ namespace Solvire\API\Exceptions;
  * TODO need to combined this with the API excpeption - duplicate
  *
  *
- * @author solvire <stevenjscott@gmail.com>
+ * @author solvire <info@scotttactical.com>
  * @package API
  * @namespace Solvire\API\Exceptions
  */

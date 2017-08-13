@@ -7,7 +7,7 @@ use Solvire\Utilities\OptionsChecker as Ch;
  * Just map a static output
  * Methods are only GET
  *
- * @author solvire <stevenjscott@gmail.com>
+ * @author solvire <info@scotttactical.com>
  * @package Serializers
  * @namespace Solvire\API\Serializers
  */

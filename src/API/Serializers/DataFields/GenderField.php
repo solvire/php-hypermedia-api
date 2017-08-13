@@ -5,7 +5,7 @@ namespace Solvire\API\Serializers\DataFields;
 use Solvire\Utilities\GenderNormalizer as G;
 /**
  *
- * @author solvire <stevenjscott@gmail.com>
+ * @author solvire <info@scotttactical.com>
  * @package DataFields
  * @namespace Solvire\API\Serializers\DataFields
  */

@@ -234,7 +234,7 @@ use Solvire\API\Serializers\DataFields\SplitPointField;
 
 /**
  * 
- * @author solvire <stevenjscott@gmail.com>
+ * @author solvire <info@scotttactical.com>
  * @package Serializers
  * @namespace App\Http\Controllers\API\Serializers
  */
@@ -284,7 +284,7 @@ use Solvire\API\Serializers\DataFields\DateTimeField;
 
 /**
  * 
- * @author solvire <stevenjscott@gmail.com>
+ * @author solvire <info@scotttactical.com>
  * @package Serializers
  * @namespace LeadFerret\Http\Controllers\API\Serializers
  */
@@ -345,7 +345,7 @@ use Solvire\API\Serializers\DataFields\GenderField;
 /**
  * Serialize a contact object 
  * 
- * @author solvire <stevenjscott@gmail.com>
+ * @author solvire <info@scotttactical.com>
  * @package Serializers
  * @namespace LeadFerret\Http\Controllers\API\Serializers
  */

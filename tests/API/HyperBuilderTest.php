@@ -3,7 +3,7 @@ namespace Solvire\API;
 
 /**
  *
- * @author solvire <stevenjscott@gmail.com>
+ * @author solvire <info@scotttactical.com>
 * @group API
  * @package API
  * @namespace Solvire\API

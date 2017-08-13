@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 /**
  * Providing some basic CRUD level stuff
  *
- * @author solvire <stevenjscott@gmail.com>
+ * @author solvire <info@scotttactical.com>
  * @package RepresentationControllers
  * @namespace Solvire\API\Representatives
  */

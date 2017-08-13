@@ -6,7 +6,7 @@ use Solvire\API\Renderers\BaseRenderer;
 
 /**
  *
- * @author solvire <stevenjscott@gmail.com>
+ * @author solvire <info@scotttactical.com>
  * @package RepresentationControllers
  * @namespace Solvire\API\Representatives
  */

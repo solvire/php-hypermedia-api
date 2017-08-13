@@ -6,7 +6,7 @@ use Solvire\API\Serializers\BaseSerializer;
 /**
  * Base of the Renderer classes
  *
- * @author solvire <stevenjscott@gmail.com>
+ * @author solvire <info@scotttactical.com>
  * @package Renderers
  * @namespace Solvire\API\Renderers
  */
