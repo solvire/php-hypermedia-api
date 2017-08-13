@@ -21,20 +21,21 @@ abstract class APIException extends \RuntimeException
 
     private $errors;
 
+
     /**
      *
-     * @param string $message            
-     * @param integer $statusCode            
-     * @param \Exception $previous            
-     * @param array $errors            
-     * @param array $headers            
+     * @param string $message
+     * @param integer $statusCode
+     * @param \Exception $previous
+     * @param array $errors
+     * @param array $headers
      */
     public function __construct($message, $statusCode = 0, \Exception $previous = null, array $errors = [], array $headers = [])
     {
         $this->statusCode = $statusCode;
         $this->headers = $headers;
         $this->errors = $errors;
-        
+
         parent::__construct($message, $statusCode, $previous);
     }
 
