@@ -25,15 +25,15 @@ class Resource
 
     /**
      * can either be the ID or some other unique name
-     * 
+     *
      * @var string
      */
     protected $name = null;
 
     /**
      *
-     * @param string $name            
-     * @param BaseSerializer $serializers            
+     * @param string $name
+     * @param BaseSerializer $serializers
      */
     public function __construct($name = '', $serializer = null)
     {
@@ -43,7 +43,7 @@ class Resource
 
     /**
      *
-     * @param string $name            
+     * @param string $name
      * @return \Solvire\API\JSONSchema\Resource
      */
     public function setName($name)

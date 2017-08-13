@@ -18,7 +18,7 @@ class ResourceCollection extends Sequence
      * There isn't much to ordering here.
      * Just use a numeric key and we will try tro sort later
      *
-     * @param array $resources            
+     * @param array $resources
      */
     public function __construct($resources = [])
     {
@@ -41,7 +41,7 @@ class ResourceCollection extends Sequence
 
     /**
      *
-     * @param Resource $resource            
+     * @param Resource $resource
      * @throws \RuntimeException
      */
     public function add($resource)
