@@ -13,9 +13,9 @@ class InvalidParameterException extends APIException
 
     /**
      *
-     * @param string $message            
-     * @param \Exception $previous            
-     * @param array $errors            
+     * @param string $message
+     * @param \Exception $previous
+     * @param array $errors
      */
     public function __construct($message, $previous = null, array $errors = [])
     {

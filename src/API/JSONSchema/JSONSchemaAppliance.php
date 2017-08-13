@@ -29,27 +29,27 @@ class JSONSchemaAppliance implements Schemable
 
     /**
      *
-     * @param \Solvire\API\JSONSchema\Resource $resource            
+     * @param \Solvire\API\JSONSchema\Resource $resource
      * @return \Solvire\API\JSONSchema\JSONSchemaAppliance
      */
     public function registerResource(Resource $resource)
     {
         if ($this->resources == null)
             $this->resources = new ResourceCollection();
-        
+
         $this->resources->add($resource);
         return $this;
     }
 
     /**
      *
-     * @param array $options            
+     * @param array $options
      */
     public function constructBase(array $options = null)
     {
         if (! isset($this->base))
             $this->base = new Base();
-        
+
         $this->base->setBaseUrl(isset($options['baseUrl']) ? $options['baseUrl'] : Ev::get('API_BASE_URL'));
         $this->base->setBasePath(isset($options['basePath']) ? $options['basePath'] : Ev::get('API_BASE_PATH'));
         $this->base->setDocumentationUrl(isset($options['documentationUrl']) ? $options['documentationUrl'] : Ev::get('API_DOCUMENTATION_URL'));
@@ -70,7 +70,7 @@ class JSONSchemaAppliance implements Schemable
 
     /**
      * (non-PHPdoc)
-     * 
+     *
      * @see \Solvire\API\JSONSchema\Schemable::allSet()
      */
     public function allSet()

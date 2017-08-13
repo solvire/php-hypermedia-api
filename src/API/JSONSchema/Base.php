@@ -6,7 +6,7 @@ use Solvire\Application as Ev;
 
 /**
  * Base of the schema
- * 
+ *
  * @author solvire <info@scotttactical.com>
  * @package JSONSchema
  * @namespace Solvire\API\JSONSchema
@@ -16,7 +16,7 @@ class Base implements Schemable
 
     /**
      * basically application name
-     * 
+     *
      * @var string $name
      */
     protected $name = null;
@@ -72,7 +72,7 @@ class Base implements Schemable
 
     /**
      *
-     * @param array $options            
+     * @param array $options
      */
     public function __construct(array $options = null)
     {
@@ -86,7 +86,7 @@ class Base implements Schemable
 
     /**
      *
-     * @param string $name            
+     * @param string $name
      */
     public function setName($name)
     {
@@ -105,7 +105,7 @@ class Base implements Schemable
 
     /**
      *
-     * @param string $baseUrl            
+     * @param string $baseUrl
      */
     public function setBaseUrl($baseUrl)
     {
@@ -114,7 +114,7 @@ class Base implements Schemable
 
     /**
      *
-     * @param string $basePath            
+     * @param string $basePath
      */
     public function setBasePath($basePath)
     {
@@ -123,7 +123,7 @@ class Base implements Schemable
 
     /**
      *
-     * @param string $documentationUrl            
+     * @param string $documentationUrl
      */
     public function setDocumentationUrl($documentationUrl)
     {
@@ -132,7 +132,7 @@ class Base implements Schemable
 
     /**
      *
-     * @param string $description            
+     * @param string $description
      */
     public function setDescription($description)
     {
@@ -143,7 +143,7 @@ class Base implements Schemable
      *
      *
      * (non-PHPdoc)
-     * 
+     *
      * @see \Solvire\API\JSONSchema\Schemable::allSet()
      * @return s true or blows up
      */
@@ -154,23 +154,23 @@ class Base implements Schemable
             if (! isset($this->$field) || $this->$field === null || $this->$field === '')
                 $errors[$field] = "Error the field: $field must be set in Base.";
         }
-        
+
         if (count($errors))
             throw new \RuntimeException('Errors . ' . print_r($errors, 1));
-        
+
         return true;
     }
 
     /**
      * dish it up
      * (non-PHPdoc)
-     * 
+     *
      * @see \Solvire\API\JSONSchema\Schemable::toSchema()
      */
     public function toSchema()
     {
         $this->allSet();
-        
+
         return [
             'id' => $this->id,
             'basePath' => $this->basePath,
@@ -183,4 +183,3 @@ class Base implements Schemable
         ];
     }
 }
-

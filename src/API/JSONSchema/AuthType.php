@@ -17,8 +17,8 @@ class AuthType
 
     /**
      *
-     * @param string $name            
-     * @param array $scopes            
+     * @param string $name
+     * @param array $scopes
      */
     public function __construct(string $name, array $scopes)
     {

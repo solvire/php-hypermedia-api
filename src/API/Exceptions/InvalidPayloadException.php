@@ -13,9 +13,9 @@ class InvalidPayloadException extends APIException
 
     /**
      *
-     * @param string $message            
-     * @param \Exception $previous            
-     * @param array $errors            
+     * @param string $message
+     * @param \Exception $previous
+     * @param array $errors
      */
     public function __construct($message = 'Unprocessable Entity', $previous = null, array $errors = [])
     {
